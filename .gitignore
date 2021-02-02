@@ -1,0 +1,16 @@
+# Project exclude paths
+/.gradle/
+/app/build/
+/app/build/intermediates/javac/debug/classes/
+/image_cropper/build/
+/image_cropper/build/intermediates/javac/debug/classes/
+/jiaozivideoplayer/build/
+/jiaozivideoplayer/build/intermediates/javac/debug/classes/
+/k4l-video-trimmer/build/
+/k4l-video-trimmer/build/intermediates/javac/debug/classes/
+/library_arc/build/
+/library_arc/build/intermediates/javac/debug/classes/
+/library_scrollable/build/
+/library_scrollable/build/intermediates/javac/debug/classes/
+/VideoLibtoro/build/
+/VideoLibtoro/build/intermediates/javac/debug/classes/

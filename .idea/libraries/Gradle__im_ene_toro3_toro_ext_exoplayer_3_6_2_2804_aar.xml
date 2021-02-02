@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: im.ene.toro3:toro-ext-exoplayer:3.6.2.2804@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b0acd0f40cd36bb01dd994a4e81fc683/jetified-toro-ext-exoplayer-3.6.2.2804/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b0acd0f40cd36bb01dd994a4e81fc683/jetified-toro-ext-exoplayer-3.6.2.2804/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b0acd0f40cd36bb01dd994a4e81fc683/jetified-toro-ext-exoplayer-3.6.2.2804/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/im.ene.toro3/toro-ext-exoplayer/3.6.2.2804/ebad72698ef4141d4e3f1916665afde948a147b9/toro-ext-exoplayer-3.6.2.2804-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/im.ene.toro3/toro-ext-exoplayer/3.6.2.2804/d0d2f8ea8c1a3582fee997a4888d755419cd6c54/toro-ext-exoplayer-3.6.2.2804-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

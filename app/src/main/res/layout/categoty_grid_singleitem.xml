@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/cat_singup_select">
+
+        <TextView
+            android:id="@+id/textCatName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nabilah"
+            android:text=""
+            android:textColor="@color/editbox_textcolor"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/dj" />
+
+        <RelativeLayout
+            android:id="@+id/layoutCatSelect"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_centerHorizontal="true"
+            android:background="#560288D1"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/textSelector"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/seen_icon"
+                android:tint="@color/blue_900" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

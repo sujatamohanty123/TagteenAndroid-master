@@ -1,0 +1,63 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fullbackground"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/logo_margintop"
+            android:src="@drawable/tagteen_final_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/blue_heading">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/txtPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/phone_icon"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:gravity="center"
+                    android:hint="Enter Phone no"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:minWidth="350dp"
+                    android:textColor="@color/blue_heading"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imgVerify"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/signup_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

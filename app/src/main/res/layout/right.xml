@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/cmp_chat_buble_white"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_margin="2dp"
+        android:orientation="vertical"
+        android:id="@+id/bubble_layout">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/chat_company_reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="60dp"
+            android:orientation="vertical">
+
+            <in.tagteen.tagteen.emoji.EmojiconTextView
+                android:id="@+id/msgr"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                style="@style/chat_text_message_style"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/hello_world"
+                android:autoLink="web"
+                emojicon:emojiconSize="28sp"
+                android:maxWidth="250dp"/>
+
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right|bottom"
+    android:gravity="right"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="5dp"
+    android:orientation="horizontal"
+    android:layout_toRightOf="@+id/chat_company_reply_text">
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="top"
+            android:text="02:45 pm"
+            android:layout_alignBottom="@id/chat_company_reply_text"
+            android:layout_marginLeft="10dp"
+            style="@style/chat_timings"
+            android:paddingRight="10dp"
+            android:textColor="@color/gray_1"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/chat_company_reply_text" />
+
+
+<ImageView
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:src="@drawable/readmessage_indicater"
+    />
+
+</LinearLayout>
+    </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_layout">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView_chat"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pc"
+            emojicon:riv_border_color="@color/actionbar_bg"
+            emojicon:riv_corner_radius="10dp"
+            emojicon:riv_mutate_background="true"
+            emojicon:riv_tile_mode="clamp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selfReation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/selfReation_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vedio_layout">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView_video"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pc"
+                emojicon:riv_border_color="@color/actionbar_bg"
+                emojicon:riv_border_width="1dip"
+                emojicon:riv_corner_radius="10dp"
+                emojicon:riv_mutate_background="true"
+                emojicon:riv_tile_mode="clamp" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_more"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/voice_layout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/cmp_chat_buble_white"
+            android:orientation="horizontal">
+
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:paddingLeft="10dp"
+    android:onClick="true"
+    android:id="@+id/play_stop_button"
+    android:src="@android:drawable/ic_media_play"
+    android:layout_gravity="center_vertical"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:text="00:00"/>
+
+            <SeekBar
+                android:id="@+id/seekbar_play"
+                android:layout_width="170dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:id="@+id/file_layout"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/left_buble"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="ZYz.pdf"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:background="@drawable/cmp_chat_buble_white"
+        android:id="@+id/ping_layout">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ping_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pc"
+            emojicon:riv_border_color="@color/actionbar_bg"
+            emojicon:riv_border_width="1dip"
+            emojicon:riv_corner_radius="10dp"
+            emojicon:riv_mutate_background="true"
+            emojicon:riv_tile_mode="clamp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="you Pinged "/>
+
+       <ImageView
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:src="@drawable/ping_icon"/>
+
+        </LinearLayout>
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:gravity="right"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/chat_company_reply_text">
+
+            <TextView
+                android:id="@+id/time_of_ping"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="top"
+                android:text="02:45 pm"
+                android:layout_alignBottom="@id/chat_company_reply_text"
+                android:layout_marginLeft="10dp"
+                style="@style/chat_timings"
+                android:paddingRight="10dp"
+                android:textColor="@color/gray_1"
+                android:singleLine="true"
+                android:layout_toRightOf="@id/chat_company_reply_text" />
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/readmessage_indicater"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

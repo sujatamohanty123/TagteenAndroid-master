@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="260dp"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="26dp"
+    android:textColor="@color/actionbar_bg"
+    android:text="Take a selfi"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:padding="10dp"
+                android:id="@+id/imageView1"
+                android:src="@drawable/camera_pic_upload"
+                android:scaleType="fitCenter"
+                tagteenApplication:riv_border_width="3dip"
+                android:layout_gravity="center"
+                tagteenApplication:riv_border_color="@color/actionbar_bg"
+                tagteenApplication:riv_mutate_background="true"
+                tagteenApplication:riv_tile_mode="clamp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/actionbar_bg"
+                android:text="and create your selfi reaction"/>
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:horizontalSpacing="2dp"
+                    android:stretchMode="columnWidth"
+                    android:fillViewport="true"
+                    />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+</ScrollView>
+

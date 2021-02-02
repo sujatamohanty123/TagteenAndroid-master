@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.jpeng:LoadingProgress-1.1.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/aa8f654e45aaa085e2a4d03864892353205a635b/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/aa8f654e45aaa085e2a4d03864892353205a635b/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jpeng/LoadingProgress/1.1.0/f5e4f5e55dff4ea39c75e9ef6df64e658546ff8a/LoadingProgress-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TagteenAndroid-master.iml" filepath="$PROJECT_DIR$/.idea/modules/TagteenAndroid-master.iml" group="TagteenAndroid-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VideoLibtoro/VideoLibtoro.iml" filepath="$PROJECT_DIR$/.idea/modules/VideoLibtoro/VideoLibtoro.iml" group="TagteenAndroid-master/VideoLibtoro" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TagteenAndroid-master/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chat/chat.iml" filepath="$PROJECT_DIR$/.idea/modules/chat/chat.iml" group="TagteenAndroid-master/chat" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/image_cropper/image_cropper.iml" filepath="$PROJECT_DIR$/.idea/modules/image_cropper/image_cropper.iml" group="TagteenAndroid-master/image_cropper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jiaozivideoplayer/jiaozivideoplayer.iml" filepath="$PROJECT_DIR$/.idea/modules/jiaozivideoplayer/jiaozivideoplayer.iml" group="TagteenAndroid-master/jiaozivideoplayer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/k4l-video-trimmer/k4l-video-trimmer.iml" filepath="$PROJECT_DIR$/.idea/modules/k4l-video-trimmer/k4l-video-trimmer.iml" group="TagteenAndroid-master/k4l-video-trimmer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library_arc/library_arc.iml" filepath="$PROJECT_DIR$/.idea/modules/library_arc/library_arc.iml" group="TagteenAndroid-master/library_arc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library_scrollable/library_scrollable.iml" filepath="$PROJECT_DIR$/.idea/modules/library_scrollable/library_scrollable.iml" group="TagteenAndroid-master/library_scrollable" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openlive/openlive.iml" filepath="$PROJECT_DIR$/.idea/modules/openlive/openlive.iml" group="TagteenAndroid-master/openlive" />
+    </modules>
+  </component>
+</project>

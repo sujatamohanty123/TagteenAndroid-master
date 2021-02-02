@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fb_gb">
+
+    <RelativeLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+          <com.google.android.exoplayer2.ui.PlayerView
+              android:id="@+id/player"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_centerInParent="true"
+              tagteenApplication:auto_show="false"
+              tagteenApplication:controller_layout_id="@layout/custom_controls"
+              tagteenApplication:hide_on_touch="true"
+              tagteenApplication:surface_type="texture_view">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/posterView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true" />
+
+            <ProgressBar
+                android:id="@+id/progressBarBuffering"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/white"
+                android:visibility="gone" />
+
+          </com.google.android.exoplayer2.ui.PlayerView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:background="@color/fb_gb"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_userpic" />
+
+            <LinearLayout
+                android:id="@+id/layoutName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/profileImage"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/feed_sub_headrtext_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/userTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:maxLength="20"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bvp_text_size_small" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textBeAFnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/layoutTime"
+                android:background="@drawable/fnn_unselect"
+                android:padding="8dp"
+                android:text="Support"
+                android:textSize="@dimen/bvp_text_size_small"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/layoutTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/moreOptions"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/horizontal_3dots" />
+
+                <TextView
+                    android:id="@+id/feedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/gray5"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_above="@+id/feedDesc"
+            android:background="@color/fb_gb"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/roksmall"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:tint="@color/red_600"
+                tagteenApplication:srcCompat="@drawable/ic_bottom_youthube" />
+
+            <TextView
+                android:id="@+id/likecount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/roksmall"
+                android:text=""
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+
+            <TextView
+                android:id="@+id/textCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/viewCount"
+                android:text=""
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+
+            <TextView
+                android:id="@+id/viewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:paddingRight="5sp"
+                android:text=""
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/feedDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_above="@+id/linear"
+            android:autoLink="web"
+            android:background="@color/fb_gb"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="5dp"
+            android:textColor="@color/green_50"
+            android:textColorLink="@color/white"
+            android:textSize="@dimen/feed_desc_text_size" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/fb_gb"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/rokImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:tint="@color/green_50"
+                    tagteenApplication:srcCompat="@drawable/ic_bottom_youthube" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rokImage"
+                    android:text="  U Rock  "
+                    android:textColor="@color/green_50"
+                    android:textSize="@dimen/floating_label_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imagecomment"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:tint="@color/colorPrimaryDark"
+                    tagteenApplication:srcCompat="@drawable/ic_svg_comment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imagecomment"
+                    android:text="  Comment  "
+                    android:textColor="@color/green_50"
+                    android:textSize="@dimen/floating_label_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutshare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/layoutComment"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageShare"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    tagteenApplication:srcCompat="@drawable/ic_svg_share_select" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageShare"
+                    android:text="  Share  "
+                    android:textColor="@color/green_50"
+                    android:textSize="@dimen/floating_label_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_below="@id/linear"
+            android:layout_marginTop="15dp"
+            android:background="@color/gray2" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/framTrans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#9A000000"
+        android:clickable="false"
+        android:visibility="gone" />
+</RelativeLayout>

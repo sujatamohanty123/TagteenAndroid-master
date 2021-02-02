@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <in.tagteen.tagteen.videoPakage.ZoomableTextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tagteenApplication:maxScale="6"
+        tagteenApplication:resize_mode="fill"
+        tagteenApplication:surface_type="texture_view"
+        tagteenApplication:use_artwork="true"
+        tagteenApplication:use_controller="true"
+        tagteenApplication:controller_layout_id="@layout/exo_playback_custom_control_view"/>
+
+
+</FrameLayout>

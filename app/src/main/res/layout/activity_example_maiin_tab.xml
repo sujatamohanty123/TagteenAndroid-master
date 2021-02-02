@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".MainDashboardActivity">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/dash_board_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mbd_button_container"
+        android:orientation="vertical" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mbd_button_container"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:background="@color/gray5" />
+
+    <LinearLayout
+        android:id="@+id/mbd_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bottom_tab_home_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:tint="@color/colorPrimaryDark"
+            tagteenApplication:srcCompat="@drawable/ic_talent_icon_new" />
+
+        <TextView
+            android:id="@+id/lblTalent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/talent"
+            android:textSize="@dimen/bottom_tab_text_size" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bottom_tab_Chat_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            tagteenApplication:srcCompat="@drawable/ic_webshows_icon_new" />
+
+        <TextView
+            android:id="@+id/lblSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/webshows"
+            android:textSize="@dimen/bottom_tab_text_size" />
+
+      </LinearLayout>
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:id="@+id/layoutAddTalentVideo"-->
+        <!--                    android:layout_width="40dp"-->
+        <!--                    android:layout_height="40dp"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:background="@drawable/rewards_bg"-->
+        <!--                    android:backgroundTint="@color/colorPrimaryDark">-->
+
+        <!--                    <ImageView-->
+        <!--                        android:layout_width="25dp"-->
+        <!--                        android:layout_height="25dp"-->
+        <!--                        android:tint="@color/white"-->
+        <!--                        tagteenApplication:srcCompat="@drawable/ic_webshows_icon" />-->
+
+        <!--                </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+        </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bottom_tab_notifiation_icon"
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            tagteenApplication:srcCompat="@drawable/ic_knowledge_icon" />
+
+        <TextView
+            android:id="@+id/lblKnowledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Celebrities"
+            android:textSize="@dimen/bottom_tab_text_size" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bottom_tab_profile_icon"
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            tagteenApplication:srcCompat="@drawable/ic_gaming_icon" />
+
+        <TextView
+            android:id="@+id/lblPlacements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/gaming"
+            android:textSize="@dimen/bottom_tab_text_size" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddTalentVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        tools:ignore="NestedWeights">
+
+      <LinearLayout
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:elevation="5dp"
+          android:gravity="center"
+          android:background="@drawable/rewards_bg"
+          android:backgroundTint="@color/colorPrimaryDark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:tint="@color/white"
+            tagteenApplication:srcCompat="@drawable/ic_video_icon_new" />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/txt_webshows"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:textSize="@dimen/bottom_tab_text_size" />
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</FrameLayout>

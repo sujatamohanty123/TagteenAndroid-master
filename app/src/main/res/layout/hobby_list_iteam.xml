@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/hobby_textView_container"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!--<com.apg.mobile.roundtextview.RoundLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--tagteenApplication:allCorner="16dp"-->
+        <!--tagteenApplication:bgColor="#EA3238">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--&gt;-->
+
+      <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@android:drawable/ic_lock_idle_lock"-->
+          <!--android:id="@+id/imageView2" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/hobby_textView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="2dp"-->
+                <!--android:layout_marginStart="2dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_toEndOf="@+id/imageView2"-->
+                <!--android:layout_toRightOf="@+id/imageView2"-->
+                <!--android:text="nice View" />-->
+
+
+        <!--</RelativeLayout>-->
+
+    <!--</com.apg.mobile.roundtextview.RoundLayout>-->
+    <com.apg.mobile.roundtextview.BadgeView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hobby_textView"
+        android:layout_marginTop="8dp"
+        tagteenApplication:mainAllCorner="30dp"
+        tagteenApplication:mainText="Wait for transfer"
+        tagteenApplication:subAllCorner="30dp" />
+
+</LinearLayout>

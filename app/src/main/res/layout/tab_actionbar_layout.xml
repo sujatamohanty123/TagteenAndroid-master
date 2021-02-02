@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:minHeight="?attr/actionBarSize"
+    android:id="@+id/mainActivityBar"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/background_of_app"
+    tagteenApplication:contentInsetLeft="0dp"
+    tagteenApplication:contentInsetStart="0dp"
+    tagteenApplication:contentInsetEnd="0dp"
+    tagteenApplication:contentInsetRight="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/appname_1"
+            android:background="@android:color/transparent"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="20dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            style="@style/myCustomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/appname_1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignLeft="@+id/appname_1"
+            tagteenApplication:tabGravity="fill"
+            tagteenApplication:tabMode="scrollable"/>
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

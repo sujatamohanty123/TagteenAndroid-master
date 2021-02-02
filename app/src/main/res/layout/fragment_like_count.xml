@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.tagteen.tagteen.Fragments.LikeCountFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/background_light"
+        tagteenApplication:tabGravity="fill"
+        tagteenApplication:tabIndicatorColor="@color/colorPrimary"
+        tagteenApplication:tabIndicatorHeight="2dp"
+        tagteenApplication:tabMaxWidth="0dp"
+        tagteenApplication:tabMode="scrollable"
+        tagteenApplication:tabPaddingEnd="0dp"
+        tagteenApplication:tabPaddingStart="0dp"
+        tagteenApplication:tabSelectedTextColor="@color/colorPrimary"
+        tagteenApplication:tabTextColor="@color/grey_700" />
+
+    <View
+        android:id="@+id/bottom_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e6e6e6" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager1"
+        class="in.tagteen.tagteen.Fragments.AllUserAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</LinearLayout>

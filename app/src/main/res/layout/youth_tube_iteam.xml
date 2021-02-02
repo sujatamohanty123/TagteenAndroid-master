@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fb_gb"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fb_gb"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_userpic" />
+
+            <LinearLayout
+                android:id="@+id/layoutName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/profileImage"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"
+                    android:text="Toro Creator"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/feed_sub_headrtext_size" />
+
+                <TextView
+                    android:id="@+id/userTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:maxLength="20"
+                    android:text="Tag-#10009"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bvp_text_size_small" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textBeAFnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/layoutTime"
+                android:background="@drawable/fnn_unselect"
+                android:padding="8dp"
+                android:text="Be a Fnn"
+                android:textSize="@dimen/bvp_text_size_small" />
+
+            <LinearLayout
+                android:id="@+id/layoutTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/moreOptions"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/horizontal_3dots" />
+
+                <TextView
+                    android:id="@+id/feedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="1 mo"
+                    android:textColor="@color/gray5"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+
+            <VideoView
+                android:id="@+id/videoPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/textTimeupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="00:00"
+                    android:textColor="@color/gray5" />
+
+                <SeekBar
+                    android:id="@+id/seekabrview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressTint="@color/white"
+                    android:tickMarkTint="@color/gray5" />
+
+                <TextView
+                    android:id="@+id/textTotaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="00:00"
+                    android:textColor="@color/gray5" />
+
+                <ImageView
+                    android:id="@+id/makeVideofullscren"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/make_fullscreen"
+                    android:tint="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/videoThumb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:minHeight="200dp"
+                android:scaleType="centerCrop"
+                fresco:placeholderImage="@drawable/background"
+                fresco:placeholderImageScaleType="centerCrop" />
+
+            <ProgressBar
+                android:id="@+id/progressVideo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fb_gb"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/roksmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                tagteenApplication:srcCompat="@drawable/ic_bottom_youthube"
+                android:tint="@color/red_600" />
+
+            <TextView
+                android:id="@+id/textRokCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/roksmall"
+                android:text="121"
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+
+            <TextView
+                android:id="@+id/textCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/textShareCount"
+                android:text="345 Comments"
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+
+            <TextView
+                android:id="@+id/textShareCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/viewCount"
+                android:text="421 Share "
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+
+            <TextView
+                android:id="@+id/viewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="5sp"
+                android:text="20 Views"
+                android:textColor="@color/gray50"
+                android:textSize="@dimen/floating_label_text_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/feedDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#0000"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:text="@string/sample"
+            android:textColor="@color/green_50"
+            android:textSize="@dimen/feed_desc_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/layoutComment"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/rokImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    tagteenApplication:srcCompat="@drawable/ic_bottom_youthube"
+                    android:tint="@color/green_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imagecomment"
+                    android:text="  U Rock  "
+                    android:textColor="@color/green_50"
+                    android:textSize="@dimen/floating_label_text_size" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imagecomment"
+                    android:layout_width="@dimen/bottom_ic_size"
+                    android:layout_height="@dimen/bottom_ic_size"
+                    tagteenApplication:srcCompat="@drawable/ic_bottom_comment"
+                    android:tint="@color/green_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imagecomment"
+                    android:text="Comments"
+                    android:textColor="@color/green_50"
+                    android:textSize="@dimen/floating_label_text_size" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutshare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/layoutComment"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageShare"
+                    android:layout_width="@dimen/bottom_ic_size"
+                    android:layout_height="@dimen/bottom_ic_size"
+                    tagteenApplication:srcCompat="@drawable/ic_bottom_share"
+                    android:tint="@color/green_50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/imageShare"
+                    android:text="  Share  "
+                    android:textColor="@color/green_50"
+                    android:textSize="@dimen/floating_label_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"></View>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framTrans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="#9A000000"
+        android:clickable="false"></FrameLayout>
+</FrameLayout>

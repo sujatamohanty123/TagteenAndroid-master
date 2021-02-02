@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Send a tag to your friends"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/tag_friends_info"
+            android:textSize="10dp" />
+
+        <LinearLayout
+            android:id="@+id/tag_first_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_phone1"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_phone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter mobiles"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:minWidth="350dp"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    tagteenApplication:backgroundTint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/cmp_menu_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/down_file_sendOption1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/cmp_add_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tag_second_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_phone"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_phone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter Mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:minWidth="350dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    tagteenApplication:backgroundTint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/cmp_menu_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/down_file_sendOption2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    tagteenApplication:srcCompat="@drawable/cmp_minus_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tag_third_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_phone3"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_phone3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter Mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:minWidth="350dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    tagteenApplication:backgroundTint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/cmp_menu_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/down_file_sendOption3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    tagteenApplication:srcCompat="@drawable/cmp_minus_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tag_fourth_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_phone4"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_phone4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter Mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:minWidth="350dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    tagteenApplication:backgroundTint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/cmp_menu_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/down_file_sendOption4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    tagteenApplication:srcCompat="@drawable/cmp_minus_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tag_fifth_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_phone5"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_phone5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter Mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:minWidth="350dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    tagteenApplication:backgroundTint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/cmp_menu_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/down_file_sendOption5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    tagteenApplication:srcCompat="@drawable/cmp_minus_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/send_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/black"
+            android:text="Send tag"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

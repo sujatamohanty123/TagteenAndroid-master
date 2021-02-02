@@ -1,0 +1,222 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/login_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fullbackground"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/signup_logo_screen"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/logo_margintop"
+            android:src="@drawable/tagteen_final_logo" />
+
+        <LinearLayout
+            android:id="@+id/login_container_tag_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Welcome to Tagteen"
+                android:textColor="#1A237E"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_Name"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Input_First_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="First Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_Last_Name"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_Last_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Last Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_DOB"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_user_DOB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="Date of Birth dd-mm-yyyy"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_Mob"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_user_Mob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="Mobile No."
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_email"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="Email id"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_password"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_user_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_confmPass"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_user_confmPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="Re-Enter Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:minWidth="350dp"
+                    android:textColor="@color/editbox_textcolor"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    tagteenApplication:backgroundTint="@color/tint_color" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/signup_button" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="@string/dont_register_age"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/red_600" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

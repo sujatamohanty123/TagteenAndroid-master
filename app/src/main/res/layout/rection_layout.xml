@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="150dp"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="20dp"
+    android:background="#0000">
+
+
+    <ImageView
+        android:id="@+id/image0"
+        android:layout_width="@dimen/rection_icon_size"
+        android:layout_height="@dimen/rection_icon_size"
+        android:layout_gravity="center|bottom"
+        tagteenApplication:srcCompat="@drawable/ic_svg_cool_select" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="@dimen/rection_icon_size"
+        android:layout_height="@dimen/rection_icon_size"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        tagteenApplication:srcCompat="@drawable/ic_svg_cool_select" />
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="@dimen/rection_icon_size"
+        android:layout_height="@dimen/rection_icon_size"
+        android:layout_gravity="left"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        tagteenApplication:srcCompat="@drawable/ic_svg_cool_select" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="@dimen/rection_icon_size"
+        android:layout_height="@dimen/rection_icon_size"
+        android:layout_gravity="left"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="35dp"
+        tagteenApplication:srcCompat="@drawable/ic_svg_cool_select" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="@dimen/rection_icon_size"
+        android:layout_height="@dimen/rection_icon_size"
+        android:layout_gravity="center|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
+        tagteenApplication:srcCompat="@drawable/ic_svg_cool_select" />
+</FrameLayout>

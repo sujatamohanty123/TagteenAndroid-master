@@ -1,0 +1,587 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+    <string name="title_activity_main_dash_board">MainDashBoardActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="app_name">tagteen</string>
+    <string name="title_activity_login">Login Activity</string>
+    <string name="Red_1">Tutorial</string>
+    <string name="tab1">Tagteen</string>
+    <string name="tab2">Login Activity</string>
+    <string name="tab3">Tutorial</string>
+    <string name="title_activity_otpentry">Sign in</string>
+    <string name="updateStory">Update Story</string>
+    <string name="createStory">Create Story</string>
+    <string name="takePhoto">Take Photo</string>
+    <string name="chooseFromLibrary">Choose from Library</string>
+    <string name="addImagesToStory">Add images to Story</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="selectPicture">Select Picture</string>
+    <string name="uploadComplete">Upload complete</string>
+    <string name="uploadFailedPleaseTryAgain">Upload failed, please try again</string>
+
+    <string name="video_edit_segment">Set the clip you want to capture</string>
+    <string name="settings">settings</string>
+    <string name="help">help</string>
+    <string name="string_help_text">
+The current application lacks necessary permissions.\n\n
+Please click \"Settings\"-\"Permissions\"-to open the required permissions.\n\nFinally, click the back button twice to return.</string>
+    <string name="quit">quit</string>
+
+    <!--=============================== GENERAL =================================================-->
+    <string name="general.label.pleasewait">Please wait</string>
+    <string name="general.label.error">Error</string>
+    <string name="general.label.ok">OK</string>
+    <string name="general.label.yes">Yes</string>
+    <string name="general.label.no">No</string>
+    <string name="general.label.cancel">Cancel</string>
+    <string name="general.button.next">Next</string>
+
+
+    <!--=============================== SIGNUP =================================================-->
+    <string name="signup.error.registration">Please do not register</string>
+    <string name="signup.error.registration.age">You are not in age Criteria for Application use!</string>
+
+
+    <!--=============================== IMAGE UPLOAD =============================================-->
+    <string name="imageupload.error.noface">You\'re Not Verified take the selfie again</string>
+    <string name="imageupload.label.upload">Upload your selfie</string>
+    <string name="imageupload.label.description">For your safety \n we dont allow fake accounts</string>
+    <string name="imageupload.label.proudtobeindian">Proud to be an Indian</string>
+    <string name="imageupload.label.agreetoallterms">Agree to all terms and policies</string>
+
+    <!-- Strings related to login -->
+    <string name="yestarday">Yesterday</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+
+    <string name="cancel_label">Cancel</string>
+    <string name="ok_label">Ok</string>
+    <string name="settings_video_quality_title">Video size %s</string>
+    <string name="settings_photo_quality_title">Photo size</string>
+
+    <!-- Preview Activity -->
+    <string name="preview_controls_confirm">Save</string>
+    <string name="preview_controls_retake">Repeat</string>
+    <string name="preview_controls_cancel">Cancel</string>
+    <string name="preview_controls_crop">Crop</string>
+    <string name="preview_controls_original_ratio_label">Original</string>
+    <string name="hint">Type emoji here</string>
+    <string name="i_love_emojicon">I \ue32d emojicon</string>
+    <string name="use_system_default">Use system default emojicon</string>
+    <string name="tutorial1">Connect with \n Like-minded teens</string>
+    <string name="title_activity_main_tutorial">MainTutorialActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_ex">Ex</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="enter_email_message">Enter your mobile number below and we will \n send you  a verification code to reset your password</string>
+    <string name="enter_email_message2">Click the secure link we sent you to reset your password.If you did not receive an email, check your spam folder </string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_camera_capture">CameraCaptureActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="texture_view">TextureView</string>
+    <string name="exoplayer_sample">ExoPlayer sample</string>
+    <string name="no_connection">Please check your network connection</string>
+
+    <string name="trending_videos">Trending Videos</string>
+    <string name="tech_videos">Tech Videos</string>
+    <string name="gaming_videos">Gaming Videos</string>
+    <string name="musical_videos">Musical Videos</string>
+    <string name="dancing_videos">Dancing Videos</string>
+    <string name="funny_videos">Funny Videos</string>
+    <string name="acting_videos">Acting Videos</string>
+    <string name="education_videos">Education Videos</string>
+
+    <string name="short_shows">ShortShows</string>
+    <string name="featured_trailer">Featured Trailer</string>
+    <string name="trailers">Trailers</string>
+    <string name="movie_shows">MovieShows</string>
+    <string name="clips">Clips</string>
+    <string name="upcoming_liveshows">Upcoming Liveshows</string>
+
+    <string name="mediaplayer_sample">MediaPlayer sample</string>
+    <string name="exoplayerview_sample">ExoPlayer with controls sample</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="activity_show_case">Toro v2 Showcase</string>
+
+    <string name="sample">
+    GitHub Wiki is a simple way to let others contribute content. Any GitHub user can create and
+    edit pages to use for documentation, examples, support, or anything you wish.
+  </string>
+
+    <string name="readme">
+    Video list auto playback made simple, specially built for RecyclerView
+  </string>
+
+    <string name="basic_sample_4">
+    Basic Sample 4: Official SimpleExoPlayerView
+  </string>
+
+    <string name="basic_sample_4_description">
+    <![CDATA[This demo show the use of Official SimpleExoPlayerView.
+    It is the same with Basic sample 1, accept for the Player View in used.]]>
+  </string>
+
+    <string name="single_item">
+    Single Item
+  </string>
+
+    <string name="single_item_description">
+    <![CDATA[A \'list\' that contains only one Media Item]]>
+  </string>
+
+    <string name="basic_sample_1">
+    Basic Sample 1: Minimal
+  </string>
+
+    <string name="basic_sample_1_description">
+    <![CDATA[In this sample, we learn how to implement very simple Video ViewHolder and Video list and
+    add Toro support into the App.]]>
+  </string>
+
+    <string name="basic_sample_2">
+    Basic Sample 2: Minimal, Ordered
+  </string>
+
+    <string name="basic_sample_2_description">
+    <![CDATA[This basic example is similar to Basic Sample 1. Additionally, we have a feature to tell Toro
+    which is the first Video we want to play.
+    Until that Video is prepared and start playing, no other Videos is allowed to play.]]>
+  </string>
+
+    <string name="basic_sample_3">
+    Basic Sample 3: Minimal, Loop, Interaction
+  </string>
+
+    <string name="basic_sample_3_description">
+    <![CDATA[<p>This basic example is similar to Basic Sample 1 plus interaction with Video View.
+    On single click, we temporarily pause the playback and show an AlertDialog, after we close that dialog, we resume the playback.
+    We also provide custom feedback on long press too.</p>
+    Furthermore, we add the ability to selective react to click event: we have different responses on the View user clicked.]]>
+  </string>
+
+    <string name="average_sample_1">
+    Average Sample 1: Custom, Stateful
+  </string>
+
+    <string name="average_sample_1_description">
+    <![CDATA[This example is similar to Basic Sample 1. But we add more complicated state listening event.
+    So that we could see how ToroPlayer\'s callback works in practice.]]>
+  </string>
+
+    <string name="advance_sample_1">
+    Advance Sample 1: Custom LayoutManager, Stateful playback
+  </string>
+
+    <string name="advance_sample_1_description">
+    <![CDATA[This example is similar to Average Sample 1. This time, we use a custom LayoutManager
+    (here I use CarouselLayoutManager) and implement ToroLayoutManager to get native support from Toro.]]>
+  </string>
+
+    <string name="facebook_sample_1">
+    Custom Sample 1: Facebook + DialogFragment
+  </string>
+
+    <string name="facebook_sample_1_description">
+    <![CDATA[This example introduce a Facebook-alike timeline, with mixed contents of Text and Videos.
+    A click event to a Video will bring a \'Video list\' where requested Video is played as well as
+    many suggested Videos.]]>
+  </string>
+
+    <string name="legacy_sample_1">
+    Legacy Sample 1: Minimal, Legacy
+  </string>
+
+    <string name="legacy_sample_1_description">
+    <![CDATA[<p>In this sample, we learn how to implement very simple Video ViewHolder and Video list and
+    add Toro support into the App.</p>
+    This sample use the legacy VideoView.]]>
+  </string>
+
+    <string name="extended_sample_1">
+    Toro Extended Sample 1: Minimal, Powerful
+  </string>
+
+    <string name="extended_sample_1_description">
+    <![CDATA[<p>In this sample, we learn how to use the extended benefit or Toro.</p>
+    <p>The list will automatically scroll to next Player and trigger the playback.</p>
+    A long click is handled to support more ideas in your Application.]]>
+  </string>
+
+    <string name="experiment">
+    Experiment: about what is coming to Toro
+  </string>
+
+    <string name="experiment_description"><![CDATA[
+    <p>This sample is the place I experiment the next features of Toro, but not be stable enough or even working.
+    Some may be included in next version, some may not.</p>
+
+    <p>It is not encourage to use it in production, but it is highly expected to have feedback as Github Issue.</p>
+
+    This experiment includes:
+
+    <ul>
+      <li>Action button with various Add/Remove behaviours to verify how Toro works with Adapter#notify***</li>
+      <li>Drag & drop to verify how Toro works with Adapter\'s data change in that case</li>
+      <li>Click to open Single Player (portrait)</li>
+    </ul>
+    To be continued.
+  ]]></string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_demo">DemoActivity</string>
+
+
+    <string name="simple_activity_transition">simple_activity_transition</string>
+    <string name="simple_fragment_transition">simple_fragment_transition</string>
+
+    <string name="lion">Lion</string>
+    <string name="pig">Pig</string>
+    <string name="gorilla">Gorilla</string>
+    <string name="fox">Fox</string>
+    <string name="armadillo">Armadillo</string>
+    <string name="tiger">Tiger</string>
+    <string name="starfish">Starfish</string>
+    <string name="giraffe">Giraffe</string>
+
+    <string name="lion_blurb">The lion (Panthera leo) is one of the big cats in the genus Panthera and a member of the family Felidae. The commonly used term African lion collectively denotes the several subspecies in Africa. With some males exceeding 250 kg (550 lb) in weight, it is the second-largest living cat after the tiger.</string>
+    <string name="gorilla_blurb" tools:ignore="PluralsCandidate">Gorillas are ground-dwelling, predominantly herbivorous apes that inhabit the forests of central Africa. The eponymous genus Gorilla is divided into two species: the eastern gorillas and the western gorillas (both critically endangered), and either four or five subspecies. They are the largest living primates. The DNA of gorillas is highly similar to that of humans, from 95–99% depending on what is counted, and they are the next closest living relatives to humans after the chimpanzees and bonobos.</string>
+    <string name="tiger_blurb">The tiger (Panthera tigris) is the largest cat species, most recognisable for their pattern of dark vertical stripes on reddish-orange fur with a lighter underside. The species is classified in the genus Panthera with the lion, leopard, jaguar and snow leopard. Tigers are apex predators, primarily preying on ungulates such as deer and bovids. They are territorial and generally solitary but social animals, often requiring large contiguous areas of habitat that support their prey requirements.</string>
+    <string name="giraffe_blurb">The giraffe (Giraffa) is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus consists of eleven species including Giraffa camelopardalis, the type species. Seven of these species are extinct, prehistoric species known from fossils, while four are still extant.</string>
+    <string name="fox_blurb">Foxes are small-to-medium-sized, omnivorous mammals belonging to several genera of the family Canidae. Foxes are slightly smaller than a medium-size domestic dog, with a flattened skull, upright triangular ears, a pointed, slightly upturned snout, and a long bushy tail (or brush). Twelve species belong to the monophyletic group of Vulpes genus of "true foxes".</string>
+    <string name="armadillo_blurb">Armadillos are New World placental mammals with a leathery armour shell. The Chlamyphoridae and Dasypodidae are the only surviving families in the order Cingulata, part of the superorder Xenarthra, along with the anteaters and sloths. The word armadillo means "little armoured one" in Spanish.</string>
+    <string name="dog_blurb">The domestic dog (Canis lupus familiaris or Canis familiaris) is a member of genus Canis (canines) that forms part of the wolf-like canids, and is the most widely abundant carnivore. The dog and the extant gray wolf are sister taxa, with modern wolves not closely related to the wolves that were first domesticated. The dog was the first domesticated species and has been selectively bred over millennia for various behaviors, sensory capabilities, and physical attributes</string>
+    <string name="penguin_blurb">Penguins (order Sphenisciformes, family Spheniscidae) are a group of aquatic, flightless birds. They live almost exclusively in the Southern Hemisphere, with only one species, the Galapagos penguin, found north of the equator. Highly adapted for life in the water, penguins have countershaded dark and white plumage, and their wings have evolved into flippers. Most penguins feed on krill, fish, squid and other forms of sealife caught while swimming underwater. They spend about half of their lives on land and half in the oceans.Although almost all penguin species are native to the Southern Hemisphere, they are not found only in cold climates, such as Antarctica. In fact, only a few species of penguin live so far south. Several species are found in the temperate zone, and one species, the Galápagos penguin, lives near the equator.</string>
+    <string name="eagle_blurb">Eagles are large, powerfully built birds of prey, with heavy heads and beaks. Even the smallest eagles, such as the booted eagle (Aquila pennata), which is comparable in size to a common buzzard (Buteo buteo) or red-tailed hawk (B. jamaicensis), have relatively longer and more evenly broad wings, and more direct, faster flight – despite the reduced size of aerodynamic feathers. Most eagles are larger than any other raptors apart from some vultures. The smallest species of eagle is the South Nicobar serpent eagle (Spilornis klossi), at 450 g (0.99 lb) and 40 cm (16 in). The largest species are discussed below. Like all birds of prey, eagles have very large, hooked beaks for ripping flesh from their prey, strong, muscular legs, and powerful talons. The beak is typically heavier than that of most other birds of prey. Eagles\' eyes are extremely powerful, having up to 3.6 times human acuity for the martial eagle, which enables them to spot potential prey from a very long distance.[2] This keen eyesight is primarily attributed to their extremely large pupils which ensure minimal diffraction (scattering) of the incoming light. The female of all known species of eagles is larger than the male.</string>
+    <string name="rabbit_blurb">Rabbits are small mammals in the family Leporidae of the order Lagomorpha, found in several parts of the world. There are eight different genera in the family classified as rabbits, including the European rabbit (Oryctolagus cuniculus), cottontail rabbits (genus Sylvilagus; 13 species), and the Amami rabbit (Pentalagus furnessi, an endangered species on Amami Ōshima, Japan). There are many other species of rabbit, and these, along with pikas and hares, make up the order Lagomorpha. The male is called a buck and the female is a doe; a young rabbit is a kitten or kit.</string>
+    <string name="dolphin_blurb">Dolphins are a widely distributed and diverse group of aquatic mammals. They are an informal grouping within the order Cetacea, excluding whales and porpoises, so to zoologists the grouping is paraphyletic. The dolphins comprise the extant families Delphinidae (the oceanic dolphins), Platanistidae (the Indian river dolphins), Iniidae (the new world river dolphins), and Pontoporiidae (the brackish dolphins), and the extinct Lipotidae (baiji or Chinese river dolphin). There are 40 extant species of dolphins. Dolphins, alongside other cetaceans, belong to the clade Cetartiodactyla with even-toed ungulates. Their closest living relatives are the hippopotamuses, having diverged about 40 million years ago.</string>
+    <string name="snek_blurb">Snakes are elongated, legless, carnivorous reptiles of the suborder Serpentes[2] that can be distinguished from legless lizards by their lack of eyelids and external ears. Like all squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads with their highly mobile jaws. To accommodate their narrow bodies, snakes\' paired organs (such as kidneys) appear one in front of the other instead of side by side, and most have only one functional lung. Some species retain a pelvic girdle with a pair of vestigial claws on either side of the cloaca.</string>
+    <string name="seal_blurb">Pinnipeds (/ˈpɪnᵻˌpɛdz/) (from Latin pinna "fin" and pes, pedis "foot"[2]), commonly known as seals,[a] are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic marine mammals. They comprise the extant families Odobenidae (whose only living member is the walrus), Otariidae (the eared seals: sea lions and fur seals), and Phocidae (the earless seals, or true seals). There are 33 extant species of pinnipeds, and more than 50 extinct species have been described from fossils. While seals were historically thought to have descended from two ancestral lines, molecular evidence supports them as a monophyletic lineage (descended from one ancestral line). Pinnipeds belong to the order Carnivora and their closest living relatives are bears and musteloids (weasels, raccoons, skunks and red pandas), having diverged about 50 million years ago.</string>
+    <string name="rhino_blurb">A rhinoceros (/raɪˈnɒsərəs/, meaning "nose horn"), often abbreviated to rhino, is one of any five extant species of odd-toed ungulates in the family Rhinocerotidae, as well as any of the numerous extinct species. Two of these extant species are native to Africa and three to Southern Asia./nMembers of the rhinoceros family are characterized by their large size (they are some of the largest remaining megafauna, with all of the species able to reach one tonne or more in weight); as well as by an herbivorous diet; a thick protective skin, 1.5–5 cm thick, formed from layers of collagen positioned in a lattice structure; relatively small brains for mammals this size (400–600 g); and a large horn. They generally eat leafy material, although their ability to ferment food in their hindgut allows them to subsist on more fibrous plant matter, if necessary. Unlike other perissodactyls, the two African species of rhinoceros lack teeth at the front of their mouths, relying instead on their lips to pluck food.</string>
+    <string name="leopard_blurb">The leopard (Panthera pardus) /ˈlɛpərd/ is one of the five "big cats" in the genus Panthera. It is a member of the family Felidae with a wide range in sub-Saharan Africa and parts of Asia. Fossil records found in Italy suggest that in the Pleistocene it occurred in Europe and Japan. \nCompared to other members of Felidae, the leopard has relatively short legs and a long body with a large skull. It is similar in appearance to the jaguar, but has a smaller, lighter physique. Its fur is marked with rosettes similar to those of the jaguar, but the leopard\'s rosettes are smaller and more densely packed, and do not usually have central spots as the jaguar\'s do. Both leopards and jaguars that are melanistic are known as black panthers.</string>
+    <string name="hippo_blurb">The common hippopotamus (Hippopotamus amphibius), or hippo, is a large, mostly herbivorous mammal in sub-Saharan Africa, and one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (Choeropsis liberiensis or Hexaprotodon liberiensis). The name comes from the ancient Greek for "river horse" (ἱπποπόταμος). After the elephant and rhinoceros, the common hippopotamus is the third-largest type of land mammal and the heaviest extant artiodactyl. Despite their physical resemblance to pigs and other terrestrial even-toed ungulates, the closest living relatives of the Hippopotamidae are cetaceans (whales, porpoises, etc.) from which they diverged about 55 million years ago. The common ancestor of whales and hippos split from other even-toed ungulates around 60 million years ago. The earliest known hippopotamus fossils, belonging to the genus Kenyapotamus in Africa, date to around 16 million years ago.</string>
+    <string name="pig_blurb">A pig is any of the animals in the genus Sus, within the Suidae family of even-toed ungulates. Pigs include the domestic pig and its ancestor, the common Eurasian wild boar (Sus scrofa), along with other species; related creatures outside the genus include the peccary, the babirusa, and the warthog. Pigs, like all suids, are native to the Eurasian and African continents. Juvenile pigs are known as piglets. Pigs are highly social and intelligent animals.</string>
+    <string name="starfish_blurb">Starfish or sea stars are star-shaped echinoderms belonging to the class Asteroidea. Common usage frequently finds these names being also applied to ophiuroids, which are correctly referred to as brittle stars or "basket stars". About 1,500 species of starfish occur on the seabed in all the world\'s oceans, from the tropics to frigid polar waters. They are found from the intertidal zone down to abyssal depths, 6,000 m (20,000 ft) below the surface.</string>
+    <string name="owl_blurb">Owls are birds from the order Strigiformes, which includes about 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight. Exceptions include the diurnal northern hawk-owl and the gregarious burrowing owl.</string>
+
+    <string name="activity_to_activity">Activity to Activity</string>
+    <string name="fragment_to_fragment">Fragment to Fragment</string>
+    <string name="picasso_activity_to_activity">Picasso Activity to Activity</string>
+    <string name="picasso_fragment_to_fragment">Picasso Fragment to Fragment</string>
+    <string name="glide_activity_to_activity">Glide Activity to Activity</string>
+    <string name="glide_fragment_to_fragment">Glide Fragment to Fragment</string>
+    <string name="recyclerview_to_activity">RecyclerView to Activity</string>
+    <string name="recyclerview_to_fragment">RecyclerView to Fragment</string>
+    <string name="recyclerview_to_viewpager">RecyclerView to ViewPager</string>
+    <string name="programmatic_flash_fix_activity">Programmatic Flash Fix Activity</string>
+    <string name="xml_flash_fix_activity">XML Flash Fix Activity</string>
+
+    <string name="bvp_right">RIGHT</string>
+    <string name="bvp_left">LEFT</string>
+    <string name="volume">Volume: %1$d</string>
+    <string name="brightness">Brightness: %1$d</string>
+
+    <string name="profile2">1045\nFANS</string>
+    <string name="profile1">35\nFAN OF</string>
+    <string name="About_me">Love myself I do. Not everything, but I love the good as well as the bad. I love my crazy lifestyle, and I love my hard discipline. I love my freedom of speech and the way my eyes get dark when I\'m tired. I love that I have learned to trust people with my heart, even if it will get broken. I am proud of everything that I am and will become.
+</string>
+
+
+    <string name="pc_detail"> Vipul Shahs Namastey England has been in news for all the wrong reasons lately. After Akshay Kumar and Sonakshi Sinha opted out of the film, the filmmaker signed Arjun Kapoor and Parineeti Chopra instead. And now latest buzz is that Akshay, who owns the Intellectual Property (IP) rights to the Namastey series along with Vipul, has asked the filmmaker to change the name of the film. It will now be called Namastey Canada.
+While Arjun and Parineeti are on board for the film, buzz has it that Jacqueline Fernandez has denied being a part of Namastey Canada.
+According to a report in Mid-Day, when Akshay and Sonakshi Sinha were part of Namastey England, model Aisha Buzz was signed as the second female lead. But with the change in the films name and star cast, the makers approached Jacqueline Fernandez to play the part.
+But the Kick actor has reportedly refused to play second fiddle to Parineeti.
+A source was quoted as telling the daily, "Jacqueline is doing some big films with top stars, including A Gentleman with Sidharth Malhotra, Judwaa 2 with Varun Dhawan, Drive with Sushant Singh Rajput and director Remo DSouzas untitled next with Salman Khan. She didnt want to play a role subordinate to Parineeti. Jackie's market price is also more than Paris. Why would she do Namastey Canada?"</string>
+    <string name="title_activity_bace">BaceActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="trimming_progress">video is trimming...</string>
+    <string name="permission_title_rationale">Permision needed</string>
+    <string name="label_ok">OK</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="tab">tab</string>
+
+    <!-- Error messages -->
+    <string name="user_cancelled_image_capture">User cancelled image capture</string>
+    <string name="user_cancelled_video_capture">User cancelled video recording</string>
+    <string name="image_capture_failed">Sorry! Failed to capture image</string>
+    <string name="video_capture_failed">Sorry! Failed to record video</string>
+
+    <!-- promotion messages -->
+    <string name="use_tagteen_daily">USE TAGTEEN DAILY AND WIN CASH PRIZES DAILY</string>
+    <string name="supporters">SUPPORTERS</string>
+    <string name="lakh_scholarship">Upto 1 Lakh Scholarships &amp; Rewards</string>
+    <string name="claim">Claim</string>
+    <string name="upload_finest_video">Upload your finest talent videos and win a headphone</string>
+    <string name="earn_daily_u_rock">Earn upto Rs. 1000 daily on your Talent video</string>
+    <string name="headphone_claim">Once you reach 25 supporters and upload your 1st talent video, you will win a headphone from us</string>
+    <string name="earn_on_video_claim">Once you reach 100 supporters you will earn Rs. 1 on every U Rock on your talent video.\n Cash will be directly deposited to your PayTm account every week.</string>
+    <string name="scholarship_claim">Once you reach 1000 supporters and 50 talent videos, you will earn this scholarship and many other rewards from us to help you in your career and life.</string>
+
+    <string name="rewards">Rewards</string>
+    <string name="rewards_admin">Rewards Admin</string>
+    <string name="rewards_rockstar">Tagteen\nRockstar</string>
+    <string name="total_income">Your total income so far</string>
+    <string name="week_income">Your income this week</string>
+    <string name="rupee_symbol">\u20B9</string>
+    <string name="rupee_10_badge">\u20B9 10</string>
+    <string name="default_income">\u20B9 0</string>
+    <string name="no_placements">Unfortunately, we currently have no placements available matching your qualifications.\n\n\n\n<b>You\'ll be placed soon...</b></string>
+
+    <string name="confirm_mobile_text">Confirm your mobile number linked to any of these accounts</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="save">Save</string>
+    <string name="money_deposited">Money will be deposited weekly to your above nominated account</string>
+    <string name="star">*</string>
+
+    <string name="tag_team">Tagteen Team</string>
+    <string name="loading">loading...</string>
+    <string name="campus_live">Campus Live</string>
+    <string name="filter">Filter</string>
+    <string name="reply">Reply</string>
+    <string name="whats_happening">What\'s happening</string>
+    <string name="post_to_campus_live">Post To Campus Live</string>
+    <string name="provide_upi_details_here">Please provide your UPI details here -></string>
+    <string name="rewards_info">PLEASE FOLLOW ALL RULES OF TAGTEEN REWARDS. ALL RANDOM VIDEOS WILL BE REMOVED AND WILL NOT BE REWARDED.</string>
+    <string name="rewards_video_info">Only genuine talent videos of your own will be rewarded</string>
+    <string name="no_camera">Tagteen doesn\'t have its own camera. Please choose any camera shoot edit and upload your video from your phone gallery.</string>
+
+    <string name="terms_of_rewards">Terms of Tagteen rewards</string>
+    <string name="tagteen_rockstars">Tagteen Rockstar</string>
+    <string name="tagteen_rockstars_title">To promote the young talents in the country, Tagteen launches “Tagteen Rockstar”</string>
+    <string name="tagteen_rockstars_desc">Every month 10 Rockstars will be chosen on the basis of their Talent, Talent Videos, Popularity and consistency.</string>
+    <string name="tagteen_rockstars_desc2">In Tagteen, Anyone can be a Rockstar...</string>
+    <string name="tagteen_rewards">Tagteen Rewards</string>
+    <string name="tagteen_rewards_info">1 U Rock = 1 Rupee*</string>
+    <string name="rewards_terms_and_conditions">1. Only talent videos where your face or your voice should be there\n\n
+        2. No tiktok or like or vigo or share chat or any videos from other tagteenApplication are allowed.\n\n
+        3. No status or lyrical videos are allowed.\n\n
+        4. Please edit your videos before uploading to gain more popularity.\n\n
+        5. Please upload 1 video maximum a day.\n\n
+        6. Payments are weekly Sunday and Monday. Your first payment is after 7days to the closest weekend.\n\n
+        7. If its a knowledge /technical/gaming or any other appropriate video, please add properly made introduction and close to the video containing the topic and any other information you feel necessary.\n\n
+        8. GAMEPLAYS ARE NOT ALLOWED. Only gaming reviews, tips and tricks with your voice explaining the video are allowed.\n\n
+        9. If it\'s a screen recording the tagteen logo in the tagteenApplication installed should be visible at some point during the recording.\n\n
+        10. If you do not upload a minimum 2 videos a week, your rewards for that week will not be paid until you start uploading videos again. Your rewards never lapse.\n\n
+        11. You need a minimum of 500 Supporters to start getting rewards from tagteen. Maximum weekly rewards are given below.</string>
+    <string name="weekly_rewards">Weekly Rewards</string>
+    <string name="weekly_rewards_desc">0-500 Supporters = No rewards(Bonus only)\n500-2000 Supporters = 100\n2000-5000 Supporters = 500\n5000-10000 Supporters = 1000</string>
+    <string name="conditions_apply">*Conditions given above apply.\n*Only most recent reward structure will supercede all rewards offered before.</string>
+    <string name="reserved_rights">Tagteen reserves the right to remove any video at any time with or without communicating with the user if it’s deemed unfit for a talent video or in violation of our policy.</string>
+
+    <string name="webshows_desc">
+        Are you an Actor who wants to be a part of short films or web series in tagteen?\n\n
+        Do you have a team who can create short films or web series?\n\n
+        If you have already done it or are planning to do it, please contact us at admin@tagteen.in or at the helpline number you are already given
+    </string>
+
+    <string name="choose_min_categories">Minimum of 5 categories</string>
+    <string name="unverified">unverified</string>
+    <string name="share_link_text">Connect and Support me on tagteen</string>
+    <string name="tag_friends_info">Only send it to your friends who are between 13-23 age, as they will be automatically verified and become your friend when they join tagteen.</string>
+
+    <string name="title_activity_add_campus_live_post">AddCampusLivePostActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="done">Done</string>
+    <string name="update">Update</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="talent">Talent</string>
+    <string name="social">Social</string>
+    <string name="knowledge">Knowledge</string>
+    <string name="webshows">Webshows</string>
+    <string name="placements">Jobs</string>
+    <string name="gaming">Gaming</string>
+
+    <string name="agora_app_id">529f5e7e73f2422ead05d81259acc5f9</string>
+    <string name="already_have_tag">Already have a Tag ID ?</string>
+    <string name="dont_register_age">Please <b>DO NOT</b> register if you are older than 29</string>
+    <string name="chat">Chat</string>
+    <string name="unverified_msg">Welcome to tagteen. Your account will be verified within 5mins. If it\'s not verified then you will receive a phone call or a message from us soon.</string>
+    <string name="no_videos_for_selected_language">No videos for selected language</string>
+    <string name="title_activity_placement_details">PlacementDetailsActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="showroom_max_video_duration">(Min 10 sec) - Max 10 mins</string>
+    <string name="my_ques_and_ans">My\nQ&amp;A</string>
+    <string name="ask_your_question">Ask your question / अपना प्रश्न पूछें ?</string>
+    <string name="be_first_one_to_answer">Be the first one to answer</string>
+    <string name="no_answers_yet">No answers yet</string>
+    <string name="you_may_also_like">YOU MAY ALSO LIKE:</string>
+    <string name="ask_your_first_question_now">Post your first question now</string>
+    <string name="answer_your_first_question_now">Answer your first question now</string>
+    <string name="watch_live">Watch Live</string>
+    <string name="profile_picture_msg">Give us your best selfie now for verification, once you are verified you can change your profile picture.</string>
+    <string name="rock_starts_marquee">This is the sample marquee text that will show the list of Top 10 Rock starts in Tagteen.</string>
+    <string name="social_marquee">This is the sample marquee text. Tagteen team social message will be shown here.</string>
+
+    <string name="rewards_rules">
+        Rules:\n\n
+        Requirements for Monetization of Your Showroom\n\n
+
+        Showroom is India\’s first real talent platform for young Indians to showcase their talent in any area, any language anywhere.
+        It focuses on the real talent of it\’s users rather than frivolous and meaningless lip sync and 15sec short video craze.\n\n
+
+        Show your talent in your own showroom and Pursue your career goals.\n\n
+
+        User must be verified by tagteen by providing photo IDs\n
+        User must have access to Paytm or Phonepe or Gpay.\n
+        Have at least 100 Supporters.\n
+        Have at least 1000 U Rocks in total including all videos.\n
+        Have at least 20 talent videos and all videos must adhere to the showroom videos policies and guidelines.\n
+        Once a showroom is monetised you are eligible to receive rewards from tagteen, a weekly random amount based on the popularity of your content.\n\n
+
+        Showroom Video Guidelines:\n\n
+
+        Only talent videos are allowed where your face or your voice should be there.\n
+        No tiktok or like or vigo or share chat or any videos from other app are allowed.\n
+        No Lipsync videos are allowed.\n
+        No status or lyrical videos are allowed.\n
+        Please edit your videos before uploading to gain more popularity.\n
+        When your showroom is monetized, you will start getting rewards from us depending on the popularity of your showroom.\n
+        If it\'s a screen recording the tagteen logo in the app installed should be visible at some point during the recording.\n
+        If it\'s a knowledge /technical/gaming or any other appropriate video, please add properly made intro and outro.\n
+        GAMEPLAYS ARE NOT ALLOWED. Only gaming reviews, tips and tricks with your voice explaining the video are allowed.\n\n
+
+        Tagteen reserves the right to remove any video at any time with or without communicating with the user if it is deemed unfit to be a talent be a talent video or in violation of our guidelines.
+    </string>
+    <string name="scroll_more_answers">(Scroll to check more answers)</string>
+    <string name="answers_count">Answers :</string>
+    <string name="liveshows_coming_soon">Next LiveShows coming soon</string>
+    <string name="no_jobs">Due to the Covid-19 pandemic, the tagteen jobs feature has been postponed until May. We will be back soon with many more jobs soon.. Good luck</string>
+
+    <string name="no_upcoming_liveshows">No upcoming LiveShows</string>
+    <string name="no_shortshows">No ShorShows</string>
+    <string name="no_featured_trailers">No Featured Trailers</string>
+    <string name="no_trailers">No Trailers</string>
+    <string name="no_movieshows">No MovieShows</string>
+    <string name="no_clips">No Clips</string>
+
+
+    <!--=============================== SHARE  =================================================-->
+    <string name="share.label.livepage"> Hey! Download tagteen app🇮🇳 and watch amazing %s
+    broadcaster⭐perform LIVE!🔥 for free. Come and Join before it ends..</string>
+    <string name="share.label.video">Hey! Download tagteen- Only talent video app of India, and watch the full video. Have fun and earn with tagteen🤘. Jay India🇮🇳</string>
+    <string name="support">Support</string>
+    <string name="u_rock">U Rock</string>
+    <string name="popular_tagteenian">popular tagteenian</string>
+    <string name="supporting">Supporting</string>
+    <string name="no_supporting_videos">Start supporting people to see their videos</string>
+    <string name="search_people">Search people</string>
+    <string name="tagteen_gaming">Tagteen Gaming</string>
+    <string name="invalid_hyperlink">Invalid access</string>
+
+    <string name="gamezop_host_name">gamezop.com</string>
+    <string name="gamezop_paytm_transaction_url">securegw.paytm.in</string>
+    <string name="gamezop_hdfcbank_url">hdfcbank.com</string>
+    <string name="resend_in">Resend in</string>
+</resources>

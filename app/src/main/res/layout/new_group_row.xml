@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/lest_iteam_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relative">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relative1">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/userViewImage_container"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/userViewImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/default_userpic"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/list_friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="18dp"
+        android:padding="1dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/listView_heading"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/userViewImage_container"
+        android:layout_toEndOf="@+id/userViewImage_container" />
+
+
+
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
+        android:text=""
+        android:visibility="gone"
+        android:padding="5dp"
+        android:textSize="14dp"
+        android:id="@+id/tag_friend_button"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:textColor="@color/listView_Unread_message_text"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:id="@+id/teacherDesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="1dp"
+        android:textColor="@color/listView_comment_color"
+        android:textSize="@dimen/tagteen_list_Comment"
+        android:layout_below="@+id/list_friend_name"
+        android:layout_toRightOf="@+id/userViewImage_container"
+        android:layout_toEndOf="@+id/userViewImage_container" />
+
+    <CheckBox
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:buttonTint="@color/blue_900" />
+</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/relative1"
+        android:background="@color/gray10"/>
+</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/relative"
+        android:id="@+id/recycler_view_list"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+
+    <!--<ImageView
+        android:id="@+id/feedImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:minHeight="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pc"
+        android:visibility="visible" />-->
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:background="@color/flat_normal_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.viewpager.widget.ViewPager>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"
+      android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layouttop"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:padding="5dp">
+
+      <ImageView
+          android:id="@+id/imageback"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:padding="5dp"
+          android:tint="@color/black"
+          tagteenApplication:srcCompat="@drawable/ic_arrow_back" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/imageback"
+          android:gravity="center"
+          android:text="Post Your Video"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <ImageView
+          android:id="@+id/imagerUplaod"
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:padding="5dp"
+          tagteenApplication:srcCompat="@drawable/ic_send_selected" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/white">
+
+        <FrameLayout
+            android:id="@+id/videoFram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="#000">
+
+          <VideoView
+              android:id="@+id/videoView"
+              android:layout_width="match_parent"
+              android:layout_height="250dp"
+              android:layout_gravity="center" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/videoCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoFram"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="left|center"
+              android:text="Select Category :"
+              android:textColor="@color/black"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+          <FrameLayout
+              android:id="@+id/framCategory"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </Spinner>
+          </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/videoLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/videoCategory"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="left|center"
+              android:text="Select Language :"
+              android:textColor="@color/black"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </Spinner>
+          </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSeparate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/videoLanguage"
+            android:background="@color/grey_100" />
+
+        <LinearLayout
+            android:id="@+id/layoutThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/viewSeparate"
+            android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center_vertical"
+              android:text="Thumbnail (optional)" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgThumbnailPlaceholder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgThumbnailSelect"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tagteenApplication:srcCompat="@drawable/ic_file_icon_campus_live" />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutThumbnail"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:minHeight="50dp"
+            android:padding="5dp"
+            android:text=""
+            android:textColorHint="@color/black"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_title"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="Title..."
+            android:minHeight="150dp"
+            android:padding="5dp"
+            android:textColorHint="@color/black"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:visibility="visible" />
+      </RelativeLayout>
+    </ScrollView>
+  </LinearLayout>
+
+</LinearLayout>

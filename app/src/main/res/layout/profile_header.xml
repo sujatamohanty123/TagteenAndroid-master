@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/layoutShareLink"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgShareLinkPic"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_userpic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblShareLinkUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Username"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:textColor="@color/full_black"/>
+
+                    <TextView
+                        android:id="@+id/lblShareLinkTagNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:textColor="@color/gray95_transparent50"
+                        android:text="tag"/>
+
+                    <TextView
+                        android:id="@+id/lblShareLinkSupportCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/full_black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:textColor="@color/gray95_transparent50"
+                        android:text="Supporters"/>
+
+                    <TextView
+                        android:id="@+id/lblShareLinkText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/full_black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@color/title_gray">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_small"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/share_link_text"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageUserPIc"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_userpic" />
+
+        <ImageView
+            android:id="@+id/imgRewards"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            tagteenApplication:srcCompat="@drawable/ic_rewards"/>
+
+        <ImageView
+            android:id="@+id/imgShareLink"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/imgRewards"
+            tagteenApplication:srcCompat="@drawable/ic_share_link_icon"
+            android:tint="@color/colorPrimary"/>
+        
+        <LinearLayout
+            android:id="@+id/layoutProgressProfilePic"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layouttag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageUserPIc"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:maxLength="25"
+                    android:text="Sandeep Kumar"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgRankBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_name"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:tint="@color/colorPrimary"
+                    tagteenApplication:srcCompat="@drawable/ic_rank_badge"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textUserTagno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_name"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/lblUnverifiedTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/unverified"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="10sp"
+                android:layout_marginBottom="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layouttag"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_gradient_strip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_txtSupporters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtSupporters"
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Supporters"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_txtSupportings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtSupportings"
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Supporting"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/imageSetting"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        tagteenApplication:srcCompat="@drawable/ic_edit_new"
+                        android:tint="@color/gray50" />
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Edit"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/imageSetting"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        tagteenApplication:srcCompat="@drawable/ic_support_inactivated" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Support"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_you_r_supporting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="7dp"
+                        android:layout_toLeftOf="@+id/imageSetting"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        tagteenApplication:srcCompat="@drawable/ic_support_activated" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="You're"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Supporting"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_Settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_settings_white_24dp"
+                        android:tint="@color/gray50" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Settings"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_tag_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/imageSetting"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        tagteenApplication:srcCompat="@drawable/ic_tagme"
+                        android:tint="@color/gray50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Tag me"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_tagged"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/imageSetting"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        tagteenApplication:srcCompat="@drawable/ic_tagged" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Tagged"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_pending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_action_circle"
+                        android:layout_height="@dimen/profile_action_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/imageSetting"
+                        android:background="@drawable/profile_round_blue_bg"
+                        android:padding="10dp"
+                        tagteenApplication:srcCompat="@drawable/ic_pending"
+                        android:tint="@color/gray50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Pending"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/profile_action_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:visibility="gone"
+        android:src="@drawable/profile_placeholder" />
+
+</LinearLayout>
+

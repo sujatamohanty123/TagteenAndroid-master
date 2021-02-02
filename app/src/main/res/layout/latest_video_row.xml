@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/oval_background_theme_color"
+    android:backgroundTint="@color/full_black"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:id="@+id/layotMain"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPost"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        tagteenApplication:cardCornerRadius="20dp"
+        tagteenApplication:cardElevation="5dp">
+
+      <RelativeLayout
+          android:id="@+id/realLayoutVideo"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/full_black">
+
+        <ImageView
+            android:id="@+id/videoThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignBottom="@id/videoThumb"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/rectangle_transparent_black"
+            android:paddingLeft="4dp"
+            android:paddingTop="2dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/white"
+            android:text="1.02"
+            android:textSize="10sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient_color_light"
+            android:backgroundTint="@color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+          <LinearLayout
+              android:id="@+id/layoutData"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="2dp"
+              android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblTagNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp"
+                android:textColor="@color/white"
+                android:maxLength="20"
+                android:textSize="@dimen/bvp_text_size_small" />
+
+          </LinearLayout>
+
+          <ImageView
+              android:id="@+id/profileImage"
+              android:layout_width="@dimen/dialog_last_message_avatar_width"
+              android:layout_height="@dimen/dialog_last_message_avatar_width"
+              android:layout_alignParentRight="true"
+              fresco:placeholderImage="@drawable/default_userpic"
+              fresco:placeholderImageScaleType="centerCrop"
+              fresco:roundAsCircle="true" />
+
+          <TextView
+              android:id="@+id/lblVideoDesc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_above="@id/layoutData"
+              android:ellipsize="end"
+              android:maxLines="2"
+              android:paddingLeft="5dp"
+              android:paddingTop="4dp"
+              android:paddingRight="5dp"
+              android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+      </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+  </RelativeLayout>
+
+</RelativeLayout>

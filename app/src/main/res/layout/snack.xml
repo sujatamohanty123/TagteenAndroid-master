@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="3"
+    android:elevation="4dp"
+    >
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:id="@+id/lin2"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:padding="25dp"
+            android:text="You want to hide"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:id="@+id/lin1">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_popup_reminder" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Let's Go"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+    <!--
+
+
+
+
+
+
+        <TextView
+            android:background="#000"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@color/blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />-->
+

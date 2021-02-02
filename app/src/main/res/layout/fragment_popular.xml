@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/trending_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTrendingVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/tech_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTechVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/gaming_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGamingVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/musical_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMusicalVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/dancing_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDancingVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/funny_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFunnyVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/acting_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerActingVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="@string/education_videos" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerEducationVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

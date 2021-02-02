@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/optionAll"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        tagteenApplication:srcCompat="@drawable/ic_req_tick"
+        android:text="All posts"/>
+
+    <TextView
+        android:id="@+id/optionByCourse"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="My course posts"/>
+
+    <TextView
+        android:id="@+id/optionByDegree"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="My degree posts"/>
+
+    <TextView
+        android:id="@+id/optionByYear"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:title="My year posts"/>
+
+    <TextView
+        android:id="@+id/optionByStandard"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:title="My standard posts"/>
+
+</LinearLayout>

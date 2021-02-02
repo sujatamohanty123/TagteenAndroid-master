@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/imgPlacement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:tint="@color/grey_400"
+            tagteenApplication:srcCompat="@drawable/ic_placements_icon"/>
+
+        <ImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vertical_3dot" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/imgPlacement"
+            android:layout_toLeftOf="@id/imgFilter"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgCampusliveLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/campus_live_logo" />
+
+            <TextView
+                android:id="@+id/lblAcademicName"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_centerHorizontal="true"
+                android:gravity="top"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/layoutHeader"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <include
+        layout="@layout/video_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator" />
+
+    <ProgressBar
+        android:id="@+id/loadingSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:indeterminateTintMode="src_atop" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/simpleSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linerLoadmore"
+        android:layout_below="@+id/layoutProgress">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCampusLive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutProgress"/>
+
+        <TextView
+            android:id="@+id/lblNoPosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="No campus live posts"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <in.tagteen.tagteen.util.AddFloatingActionButton
+        android:id="@+id/btnCreatePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        tagteenApplication:fab_addButtonColorNormal="@color/colorPrimary"
+        tagteenApplication:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        tagteenApplication:fab_plusIconColor="@color/white"
+        tagteenApplication:fab_addButtonSize="mini"/>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="1.5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray5">
+
+            <LinearLayout
+                android:id="@+id/cameraLayout_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/ic_photo_folder" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/lblEditImage"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:background="@drawable/rectangle_transparent_black"/>
+
+            <ImageView
+                android:id="@+id/remove_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="top|right"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cross_icon"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/slected_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="4dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/correct_icon" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

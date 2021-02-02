@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lblQuestionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This the title"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/imgVideoIcon"
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            tagteenApplication:srcCompat="@drawable/ic_video_icon_new"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAnswers"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="180dp"/>
+
+    <TextView
+        android:id="@+id/lblNoAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/grey_400_transparent"
+        android:textColor="@color/grey_700"
+        android:text="@string/be_first_one_to_answer"
+        android:textStyle="bold"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/lblAddAnswer"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:text="Add Answer"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/oval_background_theme_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

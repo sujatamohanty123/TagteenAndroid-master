@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.tagteen.tagteen.Fragments.AudioFileFragment">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"
+      android:orientation="vertical">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/audio_recyview"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="bottom"
+          android:layout_margin="10dp"
+          android:background="@color/white"
+          android:divider="@null"
+          android:stackFromBottom="true"
+          android:transcriptMode="alwaysScroll">
+      </androidx.recyclerview.widget.RecyclerView>
+
+  </LinearLayout>
+
+</FrameLayout>

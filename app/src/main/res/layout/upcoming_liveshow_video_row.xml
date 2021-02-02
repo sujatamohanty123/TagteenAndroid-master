@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+  <FrameLayout
+      android:layout_width="105dp"
+      android:layout_height="105dp"
+      android:background="@drawable/rewards_bg"
+      android:backgroundTint="@color/white"
+      tools:ignore="UselessParent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgThumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true" />
+
+    <RelativeLayout
+        android:id="@+id/container_trending_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginStart="1dp"
+        android:background="@drawable/bg_background_hot"
+        android:padding="2dp"
+        tools:ignore="RtlSymmetry">
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/img_trending_status"
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="1dp"
+          android:visibility="gone"
+          app:srcCompat="@drawable/ic_clock" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txt_time"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:layout_toEndOf="@id/img_trending_status"
+          android:ellipsize="end"
+          android:gravity="start"
+          android:maxLines="1"
+          android:paddingEnd="2dp"
+          android:singleLine="true"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          android:textSize="10sp"
+          tools:ignore="RtlSymmetry,SmallSp"
+          tools:text="2.30 PM" />
+
+    </RelativeLayout>
+
+  </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+{
+    "Version": "1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "ap-south-1:6bcff0ee-0b8f-4f13-96d1-a69e669c0ce1",
+                "Region": "ap-south-1"
+            }
+        }
+    },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "ttprofileurl",
+            "Region": "ap-south-1"
+        }
+    }
+}

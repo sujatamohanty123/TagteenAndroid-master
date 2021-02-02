@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :shortvideo2.4.1:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f19ea1d9c74a145998155415639d97/jetified-shortvideo2.4.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f19ea1d9c74a145998155415639d97/jetified-shortvideo2.4.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f19ea1d9c74a145998155415639d97/jetified-shortvideo2.4.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

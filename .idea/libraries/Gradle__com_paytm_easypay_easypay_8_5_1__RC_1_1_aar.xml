@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.paytm.easypay:easypay:8.5.1.-RC-1.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5dc9e3aa5baa2145f8c71812d80d43c6/jetified-easypay-8.5.1.-RC-1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5dc9e3aa5baa2145f8c71812d80d43c6/jetified-easypay-8.5.1.-RC-1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5dc9e3aa5baa2145f8c71812d80d43c6/jetified-easypay-8.5.1.-RC-1.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

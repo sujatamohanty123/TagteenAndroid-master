@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:bottomLeftRadius="50dp"
+        android:topLeftRadius="50dp"
+        android:bottomRightRadius="50dp"
+        android:topRightRadius="50dp"/>
+    <solid android:color="#6EDD00" />
+    <stroke android:width="10dp" android:color="#499900" />
+    <size android:width="80dp" android:height="80dp"/> </shape>
+
+
+
+
+    <!--	8	a	:  FBA9008	b	:  ECB200-->
+    <!--9	a	: 3C53FF9	b	: 0314B710	a	: 0E563B-->
+    <!--10	b	: 1E6C5111	a	:  7E023D11	b	:  B82B70-->
+    <!--12	a	: 470B9112	b	: 8A1DB013	a	: 9100FF-->
+    <!--13	b	: A932FF14	a	: CF0C0014	b	: F22F20-->
+    <!--15	a	: 26A48315	b	: 39B195Sent on:4:18-->
+    <!--a = inside Circle  and b = outside circle-->

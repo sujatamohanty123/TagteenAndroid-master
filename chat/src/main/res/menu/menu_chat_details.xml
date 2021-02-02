@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_sample"
+        android:orderInCategory="100"
+        tagteenApplication:showAsAction="never"
+        android:title="Sample Action"/>
+</menu>

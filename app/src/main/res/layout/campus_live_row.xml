@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tagteenApplication:cardCornerRadius="3dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutPostAttachment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/loadingSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/white"
+                    android:indeterminateTintMode="src_atop" />
+
+                <ImageView
+                    android:id="@+id/imgPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="2dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/imgPlayVideoBackground"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/category_bg"
+                    android:backgroundTint="@color/black_transparent"/>
+
+                <ImageView
+                    android:id="@+id/imgPlayVideo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="2dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:tint="@color/white"
+                    tagteenApplication:srcCompat="@drawable/ic_play_button_for_campus_live" />
+
+                <ImageView
+                    android:id="@+id/imgFileAttachment"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/black_transparent"
+                    android:src="@drawable/pdf_icon"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgFileAttachment"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/lblAttachedFilename"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lblContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:textColorLink="@color/white"
+                android:layout_below="@id/layoutPostAttachment"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblContent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/lblPostedAgo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="5m ago"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <ImageButton
+                    android:id="@+id/imgUserProfile"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_userpic" />
+
+                <TextView
+                    android:id="@+id/lblPostedBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Ajit Kumar"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:layout_toLeftOf="@id/imgUserProfile"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/moreOption"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/white"
+                android:tint="@color/white"
+                android:src="@drawable/horizontal_3dots" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lblRepliesCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="@color/black"
+        android:text="32 replies"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_reply_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/reply"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="@drawable/fnn_unselect"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

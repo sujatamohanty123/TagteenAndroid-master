@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:id="@+id/mainContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/gray5"
+      android:orientation="vertical">
+
+    <include
+        layout="@layout/video_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linerLoadmore"
+        android:layout_below="@+id/layoutProgress">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <include layout="@layout/shimmer_layout_moments"></include>
+
+            <include layout="@layout/shimmer_layout_moments"></include>
+
+          </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/annonce.main.coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="RtlHardcoded">
+
+          <LinearLayout
+              android:id="@+id/frame_relative"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
+              android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_trending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                tagteenApplication:cardCornerRadius="@dimen/medium_edges"
+                tagteenApplication:cardElevation="1dp"
+                tagteenApplication:cardMaxElevation="1dp">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Trending Videos"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/gray5" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTrendingVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+              </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--          <View-->
+            <!--              android:layout_width="match_parent"-->
+            <!--              android:layout_height="1dp"-->
+            <!--              android:background="@color/gray5" />-->
+
+
+            <!--                    <androidx.recyclerview.widget.RecyclerView-->
+            <!--                        android:id="@+id/recyclerviewNewies"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:visibility="gone"-->
+            <!--                        android:layout_height="85dp"-->
+            <!--                        android:background="@color/white"/>-->
+
+            <!--                    <View-->
+            <!--                        android:id="@+id/line"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="1dp"-->
+            <!--                        android:visibility="gone"-->
+            <!--                        android:background="@color/gray5" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+          </LinearLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+      </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/no_internet"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:layout_marginBottom="250dp"
+      android:gravity="center"
+      android:text="No Internet Connection!!!!"
+      android:textSize="19dp"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+</LinearLayout>

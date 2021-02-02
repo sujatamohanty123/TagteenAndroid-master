@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PlacementDetailsActivity"
+    tools:showIn="@layout/activity_placement_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblPostedAgo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="right"
+            android:text="2 days ago"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/lblPlacementTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Large"/>
+
+        <TextView
+            android:id="@+id/lblPlacementCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+        <TextView
+            android:id="@+id/lblPlacementPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+        <TextView
+            android:id="@+id/lblApply"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Apply"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/oval_background_theme_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Description"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+        <TextView
+            android:id="@+id/lblPlacementDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="200dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="122dp"
+      tagteenApplication:cardBackgroundColor="@color/black2"
+      tagteenApplication:cardCornerRadius="@dimen/medium_edges"
+      tagteenApplication:cardElevation="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/imgThumbnail"
+          android:layout_width="160dp"
+          android:layout_height="122dp"
+          android:adjustViewBounds="true"
+          android:minHeight="122dp" />
+
+      <!--    -->
+
+    </RelativeLayout>
+
+  </androidx.cardview.widget.CardView>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/img_user"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingEnd="6dp"
+        android:singleLine="false"
+        android:textSize="12sp"
+        tools:ignore="RtlSymmetry"
+        tools:text="Lorem Ipsum" />
+  </RelativeLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:id="@+id/container_views"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.40">
+
+      <View
+          android:layout_width="4dp"
+          android:layout_height="4dp"
+          android:layout_gravity="center_vertical"
+          android:background="@drawable/bg_filled_circle_black" />
+
+      <TextView
+          android:id="@+id/lblVideoDuration"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:ellipsize="end"
+          android:gravity="start|center_vertical"
+          android:maxLines="2"
+          android:paddingStart="6dp"
+          android:textAppearance="@android:style/TextAppearance.Small"
+          android:textColor="@color/black"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          tools:ignore="RtlSymmetry,SmallSp"
+          tools:text="00:14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="1.6">
+
+      <View
+          android:layout_width="4dp"
+          android:layout_height="4dp"
+          android:layout_gravity="center_vertical"
+          android:background="@drawable/bg_filled_circle_black" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/lblViewsCount"
+          android:layout_width="wrap_content"
+          android:layout_height="24dp"
+          android:ellipsize="end"
+          android:gravity="center"
+          android:maxLines="1"
+          android:paddingStart="6dp"
+          android:paddingEnd="6dp"
+          android:textColor="@color/black2"
+          android:textSize="12sp"
+          tools:ignore="SmallSp"
+          tools:text="35 Views" />
+
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <!--<com.github.siyamed.shapeimageview.RoundedImageView-->
+    <!--android:id="@+id/image_view"-->
+    <!--android:layout_width="70dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--tagteenApplication:siRadius="10dp"-->
+    <!--android:src="@drawable/photo_male_3"-->
+    <!--tagteenApplication:siBorderWidth="4dp"-->
+    <!--tagteenApplication:siSquare="true"-->
+    <!--android:layout_gravity="center"/>-->
+    <!--tagteenApplication:siBorderColor="@color/darkgray"-->
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/unknown_avatar"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="#000"
+        android:textSize="@dimen/text_default"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="7dp"/>
+
+</LinearLayout>

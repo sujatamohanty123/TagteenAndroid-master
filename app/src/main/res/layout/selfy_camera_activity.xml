@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frammain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+    <!-- <in.tagteen.tagteen.utils.CustomViewPager
+         android:id="@+id/viewpagerMain"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@+id/card_view"
+         tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <in.tagteen.tagteen.CarouselPicker.CarouselPickerTextView
+            android:id="@+id/carousel_selfi_component"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            tagteenApplication:items_visible="three" />
+
+    </LinearLayout>
+</RelativeLayout>

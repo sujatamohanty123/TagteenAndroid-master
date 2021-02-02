@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/layouttop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/settingback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            tagteenApplication:srcCompat="@drawable/ic_arrow_back"
+            android:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title_terms"
+            android:text="Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/settingback"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/layouttop"
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:elevation="3dp"
+        android:background="@color/list_divider"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:id="@+id/settinglist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>

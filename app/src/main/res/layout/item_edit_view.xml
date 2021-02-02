@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:seekbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:overScrollMode="never"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <in.tagteen.tagteen.VideoEditor.cutvideo.TimeSliderView
+            android:id="@+id/range_slider"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            seekbar:leftThumbDrawable="@mipmap/iv_left_thumb"
+            seekbar:leftThumbIndex="0"
+            seekbar:lineColor="@color/mainColor"
+            seekbar:lineHeight="1dp"
+            seekbar:rightThumbDrawable="@mipmap/iv_right_thumb"
+            seekbar:thumbWidth="12dp"
+            seekbar:tickCount="100" />
+    </RelativeLayout>
+</merge>

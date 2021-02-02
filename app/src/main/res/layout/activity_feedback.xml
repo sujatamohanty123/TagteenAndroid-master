@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="in.tagteen.tagteen.profile.FeedbackActivity">
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/layouttop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            tagteenApplication:srcCompat="@drawable/ic_arrow_back"
+            android:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title_terms"
+            android:text="Feedback"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/layouttop"
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:elevation="3dp"
+        android:background="@color/list_divider"/>
+    <EditText
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="8dp"
+        android:gravity="start"
+        android:hint="Enter Comment"
+        android:layout_below="@+id/view1"
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/rectangle_rounded_share"/>
+
+
+    <TextView
+        android:layout_marginTop="35dp"
+        android:padding="3dp"
+        android:id="@+id/submit"
+        android:text="SUBMIT"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/comment"
+        android:background="@drawable/cool_rounded_style"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

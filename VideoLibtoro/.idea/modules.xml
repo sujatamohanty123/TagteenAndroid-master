@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CircleProgressView/CircleProgressView.iml" filepath="$PROJECT_DIR$/../CircleProgressView/CircleProgressView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MintShow.iml" filepath="$PROJECT_DIR$/../MintShow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ShortcutBadgerLib/ShortcutBadgerLib.iml" filepath="$PROJECT_DIR$/../ShortcutBadgerLib/ShortcutBadgerLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../StickyHeaderLibrary/StickyHeaderLibrary.iml" filepath="$PROJECT_DIR$/../StickyHeaderLibrary/StickyHeaderLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VideoLibtoro.iml" filepath="$PROJECT_DIR$/VideoLibtoro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ViewPagerIndicator-Library/ViewPagerIndicator-Library.iml" filepath="$PROJECT_DIR$/../ViewPagerIndicator-Library/ViewPagerIndicator-Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../android-volley-master/android-volley-master.iml" filepath="$PROJECT_DIR$/../android-volley-master/android-volley-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bettervideoplayer/bettervideoplayer.iml" filepath="$PROJECT_DIR$/../bettervideoplayer/bettervideoplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../curton_library/curton_library.iml" filepath="$PROJECT_DIR$/../curton_library/curton_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fullscreenvideoview/fullscreenvideoview.iml" filepath="$PROJECT_DIR$/../fullscreenvideoview/fullscreenvideoview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../library-stickyList/library-stickyList.iml" filepath="$PROJECT_DIR$/../library-stickyList/library-stickyList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../library_imageloading/library_imageloading.iml" filepath="$PROJECT_DIR$/../library_imageloading/library_imageloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../library_parallaxeffect/library_parallaxeffect.iml" filepath="$PROJECT_DIR$/../library_parallaxeffect/library_parallaxeffect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../library_scrollable/library_scrollable.iml" filepath="$PROJECT_DIR$/../library_scrollable/library_scrollable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../swap_lib/swap_lib.iml" filepath="$PROJECT_DIR$/../swap_lib/swap_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../token_textview_library/token_textview_library.iml" filepath="$PROJECT_DIR$/../token_textview_library/token_textview_library.iml" />
+    </modules>
+  </component>
+</project>

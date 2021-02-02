@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/talk"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:elevation="5dp"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:layout_height="?android:attr/actionBarSize">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Tagteen Talk"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="@dimen/text_actionbar"-->
+            <!--android:textStyle="bold" />-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<View-->
+        <!--android:id="@+id/toolbar_shadow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="3dp"-->
+        <!--android:layout_below="@+id/talk"-->
+        <!--android:background="@drawable/toolbar_dropshadow" />-->
+
+
+    <!--android:layout_below="@+id/toolbar_shadow"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No friends found"
+            android:textColor="@color/grey_text"
+            android:textSize="@dimen/text_default"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/dataContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <in.tagteen.tagteen.chatting.widget.CircularImagesList
+            android:id="@+id/onlineUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/onlineUsers"
+            android:cacheColorHint="#0000"
+            android:scrollbars="vertical"
+            android:scrollingCache="false" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNewChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_friend"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

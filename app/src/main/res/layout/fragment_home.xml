@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:background="#00000000">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs_home"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="7"
+                tagteenApplication:tabGravity="fill"
+                tagteenApplication:tabIndicatorColor="@color/colorPrimary"
+                tagteenApplication:tabIndicatorHeight="0dp"
+                tagteenApplication:tabMaxWidth="0dp"
+                tagteenApplication:tabMode="fixed"
+                tagteenApplication:tabPaddingEnd="0dp"
+                tagteenApplication:tabPaddingStart="0dp"
+                tagteenApplication:tabSelectedTextColor="@color/colorPrimary"
+                tagteenApplication:tabTextColor="@color/grey_700" />
+            <View
+                android:id="@+id/toolbar_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tabs_home"
+                android:elevation="6dp"
+                android:background="@drawable/toolbar_dropshadow" />
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/home_viewpager"
+        android:background="@color/gray5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_content" />
+
+
+    <ImageButton
+        android:id="@+id/fabAdd"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/floatingbutton"
+        android:elevation="8dp"
+        tagteenApplication:srcCompat="@drawable/ic_svg_post"
+        android:tint="@color/white" />
+
+
+</RelativeLayout>

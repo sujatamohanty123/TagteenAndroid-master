@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/chat_listview_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">-->
+
+            <TextView
+                android:id="@+id/nofriendslay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rectangle"
+                android:gravity="center"
+                android:padding="25dp"
+                android:text="You don't have any fan!"
+                android:textColor="@color/gray50"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listview_con"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        <!--</android.support.design.widget.CoordinatorLayout>-->
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

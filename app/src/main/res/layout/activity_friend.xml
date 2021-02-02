@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_friend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_friend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/white_transparent"
+        tagteenApplication:tabIndicatorHeight="0dp"
+        tagteenApplication:tabMode="scrollable"
+        tagteenApplication:tabSelectedTextColor="@color/colorPrimary"
+        tagteenApplication:tabTextColor="@color/grey_700" />
+
+    <View
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:elevation="6dp"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_transparent"
+        tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

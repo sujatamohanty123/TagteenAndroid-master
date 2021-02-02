@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        tagteenApplication:cardElevation="3dp"
+        tagteenApplication:cardCornerRadius="@dimen/soft_edges">
+
+        <RelativeLayout
+            android:id="@+id/layotMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/realLayoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/list_profile_dp"
+                    android:layout_height="@dimen/list_profile_dp"
+                    fresco:placeholderImage="@drawable/default_userpic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true" />
+
+                <LinearLayout
+                    android:id="@+id/layoutName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/profileImage"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/userTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-3dp"
+                        android:maxLength="20"
+                        android:textSize="@dimen/bvp_text_size_small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/moreOptions"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/horizontal_3dots" />
+
+                    <TextView
+                        android:id="@+id/feedTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/gray78"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/feedDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realLayoutTop"
+                android:background="@color/white"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:textColor="@color/full_black"
+                android:textSize="@dimen/feed_desc_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/realLayoutVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/realLayoutTop"
+                android:background="@color/full_black"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/videoThumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/video_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/videoThumb"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rectangle_transparent_black"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lblDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/videoThumb"
+                    android:paddingLeft="10dp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textStyle="bold"
+                    android:background="@drawable/gradient_color"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realLayoutVideo"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/likeImage"
+                        style="@style/Facebook.Button.Feed"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="#0000"
+                        tagteenApplication:srcCompat="@drawable/ic_bottom_youthube"
+                        android:tint="@color/red_600" />
+
+                    <TextView
+                        android:id="@+id/likeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/floating_label_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/commentsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/floating_label_text_size" />
+
+                    <TextView
+                        android:id="@+id/viewsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="5dp"
+                        android:text=""
+                        android:textSize="@dimen/floating_label_text_size" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/layout"
+                android:background="@color/white" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

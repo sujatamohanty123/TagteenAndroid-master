@@ -1,0 +1,30 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/testimage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/drawable_photofolder" />
+
+    <LinearLayout
+        android:id="@+id/hidden_rcview"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorAccent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

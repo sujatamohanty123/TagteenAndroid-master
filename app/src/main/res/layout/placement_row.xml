@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgPlacementPic"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tag_icon"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/category_bg"
+                android:backgroundTint="@color/black_transparent"/>
+
+            <ImageView
+                android:id="@+id/playicon"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:paddingLeft="1dp"
+                android:layout_centerInParent="true"
+                android:tint="@color/white"
+                tagteenApplication:srcCompat="@drawable/ic_play_button_for_campus_live" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblPlacementTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+            <TextView
+                android:id="@+id/lblPlacementProvider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small"/>
+
+            <TextView
+                android:id="@+id/lblLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small"/>
+
+            <TextView
+                android:id="@+id/lblPostedOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/lblApply"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:background="@drawable/oval_background_theme_color"/>
+
+</RelativeLayout>

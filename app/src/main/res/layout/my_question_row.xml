@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layoutViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/view_black"/>
+
+            <TextView
+                android:id="@+id/lblViewsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="12sp"
+                android:textColor="@color/full_black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDeleteQuestion"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/layoutViews">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/delete_icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/layoutDeleteQuestion"
+            android:minHeight="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblQuestionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:text="@string/large_text"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <ImageView
+                android:id="@+id/imgVideoIcon"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                tagteenApplication:srcCompat="@drawable/ic_video_icon_new"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAnswers"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="180dp"/>
+
+    <TextView
+        android:id="@+id/lblNoAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/grey_400_transparent"
+        android:textColor="@color/grey_700"
+        android:text="@string/no_answers_yet"
+        android:textStyle="bold"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray5"/>
+
+</LinearLayout>

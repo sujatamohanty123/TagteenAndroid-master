@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+<!--      <TextView-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_marginLeft="10dp"-->
+<!--          android:layout_marginTop="10dp"-->
+<!--          android:text="@string/trending_videos"-->
+<!--          android:textAppearance="@android:style/TextAppearance.Medium"-->
+<!--          tools:ignore="RtlHardcoded" />-->
+
+<!--      <androidx.recyclerview.widget.RecyclerView-->
+<!--          android:id="@+id/recyclerTrendingVideos"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content" />-->
+
+<!--      <View-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="3dp"-->
+<!--          android:background="@color/gray5" />-->
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerViewRockstars"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

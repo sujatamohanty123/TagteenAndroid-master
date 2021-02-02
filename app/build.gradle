@@ -1,0 +1,260 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+    defaultConfig {
+        applicationId "in.tagteen.tagteen"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 31
+        versionName "1.1.9"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            zipAlignEnabled false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.0.0'
+            }
+        }
+        if (details.requested.group == 'androidx.core') {
+            details.useVersion "1.1.0"
+        }
+        //        if (details.requested.group == 'androidx.lifecycle') {
+        //            details.useVersion "2.0.0"
+        //        }
+        if (details.requested.group == 'androidx.versionedparcelable') {
+            details.useVersion "1.1.0"
+        }
+        if (details.requested.group == 'androidx.fragment') {
+            details.useVersion "1.1.0"
+        }
+        if (details.requested.group == 'androidx.appcompat') {
+            details.useVersion "1.1.0"
+        }
+        if (details.requested.group == 'com.google.android.material:material') {
+            details.useVersion "1.1.0"
+        }
+        //        if (details.requested.group == 'multidex') {
+        //            details.useVersion "2.0.1"
+        //        }
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            name 'Sonatype SNAPSHOTs';
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+        mavenLocal()
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+        google()
+        maven {
+            url 'https://maven.google.com'
+            name 'Google'
+        }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://artifactory.paytm.in/libs-release-local" }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //implementation files('org.apache.http.legacy.jar')
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    ////retrofit
+    implementation project(':k4l-video-trimmer')
+    implementation project(':jiaozivideoplayer')
+    implementation project(':library_scrollable')
+    implementation project(':library_arc')
+    implementation project(':image_cropper')
+    implementation project(path: ':VideoLibtoro')
+    implementation project(':openlive')
+
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    //implementation 'com.google.firebase:firebase-analytics:17.6.0'
+    implementation 'com.google.android.gms:play-services-vision:20.1.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+    //   implementation 'com.google.firebase:firebase-core:15.0.2'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.apg-mobile:android-round-textview:v0.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //implementation 'com.github.JesusM:HoloCircleSeekBar:v2.2.2'
+    implementation 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
+    implementation 'com.github.romandanylyk:PageIndicatorView:v0.1.1'
+    implementation 'com.yalantis:ucrop:2.2.0'
+    implementation 'gun0912.ted:tedpermission:1.0.2'
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.16.13'
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.16.13'
+
+    implementation 'com.github.zomato:androidphotofilters:1.0.2'
+    implementation 'com.github.stfalcon:multiimageview:0.1'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.4'
+    implementation 'com.github.pedrovgs:draggablepanel:1.9'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //implementation 'com.github.fiskurgit:ChipCloud:3.0.3'
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.0.1"
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'tyrantgit:explosionfield:1.0.1'
+    implementation 'com.jpardogo.materialtabstrip:library:1.1.0'
+    implementation 'jp.wasabeef:blurry:2.1.1'
+    implementation 'com.github.jlmd:AnimatedCircleLoadingView:1.1.5@aar'
+    implementation 'im.ene.toro3:toro:3.6.2.2804'
+    implementation 'im.ene.toro3:toro-ext-exoplayer:3.6.2.2804'
+    implementation 'com.allattentionhere:autoplayvideos:0.2.0'
+    implementation 'com.github.traex.rippleeffect:library:1.3'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.1.3'
+    implementation 'com.github.nirhart:parallaxscroll:1.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.andrognito.pinlockview:pinlockview:2.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.jsibbold:zoomage:1.2.0'
+    implementation 'com.alexvasilkov:gesture-views:2.5.2'
+    implementation 'nl.dionsegijn:konfetti:1.1.0'
+    implementation 'com.felipecsl.asymmetricgridview:library:2.0.1'
+
+    implementation('com.paytm.appinvokesdk:appinvokesdk:0.6') {
+        transitive = true;
+    }
+
+    //testImplementation 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation project(':chat')
+
+    //implementation 'com.github.tcking:giraffecompressor:0.1.4'
+    implementation 'com.googlecode.mp4parser:isoparser:1.0.6'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.smarteist:autoimageslider:1.3.2-appcompat'
+
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.github.jumadeveloper:networkmanager:0.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.karumi:dexter:6.2.1'
+    implementation "androidx.tonyodev.fetch2:xfetch2:3.1.4"
+    implementation 'com.google.android.gms:play-services-mlkit-face-detection:16.1.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.bokecc:speedplay:2.19.3'
+    implementation 'com.yahoo.mobile.client.android.util.rangeseekbar:rangeseekbar-library:0.1.0'
+    implementation "com.github.guilhe:seekbar-ranged-view:1.0.3"
+    implementation(name:'shortvideo2.4.1', ext:'aar')
+    implementation(name:'camerafilter2.4.1', ext:'aar')
+    //FFmpeg Library
+    //implementation 'com.writingminds:FFmpegAndroid:0.3.2'
+    implementation 'com.arthenica:mobile-ffmpeg-full:4.4.LTS'
+    implementation 'org.jcodec:jcodec-android:0.1.9'
+}
+googleServices { disableVersionCheck = true }

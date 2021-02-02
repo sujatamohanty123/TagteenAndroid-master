@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/list_item_container">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/userViewImage_container"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/userViewImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/pr_pic"
+                tagteenApplication:riv_border_color="@color/app_blue"/>
+
+
+
+            <ImageView
+                android:id="@+id/online_indicator"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/smiley"
+                android:layout_gravity="end|bottom"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="7dp"
+                />
+
+            <!--</LinearLayout>-->
+
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/list_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Rajdhani EXP"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/userViewImage_container"
+            android:layout_toRightOf="@+id/userViewImage_container"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/listView_heading"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/last_chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"
+                android:text="08:30"
+                android:textSize="10dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/listView_comment_color"
+                />
+
+            <TextView
+                android:id="@+id/chatCountIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:text="2"
+                android:layout_margin="2dp"
+                android:background="@drawable/cir_button"
+                android:gravity="center"
+                android:textColor="@color/listView_Unread_message_text"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/chatChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How are U ?"
+            android:padding="1dp"
+            android:lines="1"
+            android:maxLength="20"
+            android:layout_below="@+id/list_friend_name"
+            android:layout_alignLeft="@+id/list_friend_name"
+            android:layout_alignStart="@+id/list_friend_name"
+            android:textColor="@color/listView_comment_color"
+            android:textSize="@dimen/tagteen_list_Comment" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" />
+
+    <TextView
+    android:id="@+id/border_line"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@color/gray12"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="5dp"/>
+
+</LinearLayout>

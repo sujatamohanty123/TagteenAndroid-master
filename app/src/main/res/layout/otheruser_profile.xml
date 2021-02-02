@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/grey_50"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="60dp"
+            android:padding="5dp"
+            tagteenApplication:srcCompat="@drawable/ic_arrow_back"
+            android:tint="@color/black"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ru.noties.scrollable.ScrollableLayout
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tagteenApplication:scrollable_autoMaxScroll="true"
+        tagteenApplication:scrollable_defaultCloseUp="true">
+
+        <include layout="@layout/profile_header"></include>
+
+        <LinearLayout
+            android:id="@+id/layoutScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/bottom_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="0dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                tagteenApplication:tabGravity="fill"
+
+                tagteenApplication:tabIndicatorColor="@color/colorPrimary"
+                tagteenApplication:tabIndicatorHeight="2dp"
+                tagteenApplication:tabMaxWidth="0dp"
+                tagteenApplication:tabMode="fixed"
+                tagteenApplication:tabPaddingEnd="0dp"
+                tagteenApplication:tabPaddingStart="0dp"
+                tagteenApplication:tabSelectedTextColor="@color/colorPrimary"
+                tagteenApplication:tabTextColor="@color/grey_700" />
+
+            <View
+                android:id="@+id/bottom_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_transparent"
+            android:padding="5dp" />
+
+    </ru.noties.scrollable.ScrollableLayout>
+</FrameLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginBottom="20dp"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    android:text="Recommended Settings for Extra Privacy"
+    android:textColor="@color/signal_primary_dark"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/ScreenShortSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No ScreenShot      "
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:textOn="On"
+            android:textOff="Off"
+            android:textColor="@color/gray65"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <Switch
+            android:id="@+id/noCopyPastSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="No Copy &amp; past    "
+            android:checked="true"
+            android:layout_centerHorizontal="true"
+            android:textOn="On"
+            android:textOff="Off"
+            android:textColor="@color/gray65"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <Switch
+            android:id="@+id/forwardSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="No Forward           "
+            android:checked="true"
+            android:layout_centerHorizontal="true"
+            android:textOn="On"
+            android:textOff="Off"
+            android:textColor="@color/gray65"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <Switch
+            android:id="@+id/noPasswordSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="No Password       "
+            android:checked="true"
+            android:layout_centerHorizontal="true"
+            android:textOn="On"
+            android:textOff="Off"
+            android:textColor="@color/gray65"
+            android:gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

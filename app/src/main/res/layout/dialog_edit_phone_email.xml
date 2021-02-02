@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNewPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/lblTitle"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtNewPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Mobile number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/inputLayoutNewPhoneNumber"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtNewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutVerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayoutNewEmail"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtVerificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Current password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/lblDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/inputLayoutVerificationCode"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fnn_unselect"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.tagteen.tagteen.profile.FaqActivity">
+
+
+   <!-- <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarfaq"
+        android:elevation="4dp"
+        tagteenApplication:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/faqback"
+            android:background="@drawable/left_arrow_white"
+            android:backgroundTint="@color/black"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAQ's"
+            android:textColor="@color/black"
+            android:id="@+id/title_terms"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbarfaq"
+        android:background="@drawable/toolbar_dropshadow" />-->
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/layouttop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/faqback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            tagteenApplication:srcCompat="@drawable/ic_arrow_back"
+            android:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title_terms"
+            android:text="FAQ's"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/faqback"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/layouttop"
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:elevation="3dp"
+        android:background="@color/list_divider"/>
+    <ExpandableListView
+        android:background="@color/white"
+        android:id="@+id/simple_expandable_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#dfdfdf"
+        android:layout_below="@+id/view1"
+        android:dividerHeight=".3dp">
+    </ExpandableListView>
+</RelativeLayout>

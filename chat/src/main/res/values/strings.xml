@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Chatting App</string>
+
+    <!--exit notification-->
+    <string name="press_again_exit_app">Press again to exit</string>
+
+    <!-- Settings for Notifications Setting -->
+    <string name="activity_title_notifications">Notifications Setting</string>
+    <string name="pref_title_new_message_notifications">Notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="about_text">Aplication to send and receive message, with simple and elegant design
+        \n\nImage source :
+        \n<a href="www.designskilz.com">www.designskilz.com</a>
+    </string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+    <!--dont edit-->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string name="tab_friends">FRIENDS</string>
+    <string name="tab_chats">CHATS</string>
+    <string name="tab_groups">GROUPS</string>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fullbackground">
+
+    <ImageView
+        android:id="@+id/hb_logo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/logo_margintop"
+        android:src="@drawable/tagteen_final_logo" />
+
+    <TextView
+        android:id="@+id/textLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hb_logo"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/choose_min_categories"
+        android:textColor="@color/blue_900"
+        android:textStyle="bold"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/hobby_container"
+        android:layout_below="@+id/textLable"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/hobby_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/fnn_unselect"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/taxtLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Tap here when you're done"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/hobby_imageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/taxtLable"
+            android:src="@drawable/signup_button" />
+
+    </RelativeLayout>
+</RelativeLayout>

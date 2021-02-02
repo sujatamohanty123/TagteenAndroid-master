@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.tagteen.tagteen">
+
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.READ_PROFILE" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+  <uses-feature android:name="android.hardware.camera" />
+
+  <!--remove sms permission-->
+  <uses-permission
+      android:name="android.permission.READ_SMS"
+      tools:node="remove" />
+  <uses-permission
+      android:name="android.permission.RECEIVE_SMS"
+      tools:node="remove" />
+
+  <supports-screens
+      android:largeScreens="true"
+      android:normalScreens="true"
+      android:smallScreens="true"
+      android:xlargeScreens="true" />
+
+  <application
+      android:name=".utils.TagteenApplication"
+      android:allowBackup="true"
+      android:hardwareAccelerated="true"
+      android:icon="@drawable/logo_small"
+      android:label="@string/app_name"
+      android:largeHeap="true"
+      android:networkSecurityConfig="@xml/network_security_config"
+      android:requestLegacyExternalStorage="true"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme"
+      tools:ignore="UnusedAttribute">
+
+    <meta-data
+        android:name="com.google.mlkit.vision.DEPENDENCIES"
+        android:value="face" />
+
+    <activity
+        android:name=".PlacementDetailsActivity"
+        android:label="@string/title_activity_placement_details"
+        android:theme="@style/AppTheme.NoActionBar" />
+
+    <activity
+        android:name=".BrowsableActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:exported="true"
+        android:windowSoftInputMode="stateHidden">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+            android:host="appl.tagteen.in"
+            android:scheme="http" />
+      </intent-filter>
+    </activity>
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="in.tagteen.tagteen.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/provider_paths" />
+    </provider>
+
+    <receiver
+        android:name=".ConnectivityReceiver"
+        android:enabled="true">
+      <intent-filter>
+        <action
+            android:name="android.net.conn.CONNECTIVITY_CHANGE"
+            tools:ignore="BatteryLife" />
+      </intent-filter>
+    </receiver>
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-beta2" />
+
+    <activity
+        android:name=".SplashActivityWithAnima"
+        android:theme="@style/Theme.AppCompat.Translucent">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ResetPassword"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <!--
+        <activity
+        android:name=".videoPakage.ExoPlayerViewActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme.NoActionBar" />
+    -->
+    <activity
+        android:name=".ChatTreadActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".SelfiActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".PhotoUpload"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".OTPEntryActivity"
+        android:label="@string/title_activity_otpentry"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".Fragments.youthtube.VideoDetailListActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:label="@string/title_activity_otpentry"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".LoginActivity"
+        android:label="@string/title_activity_otpentry"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".SignUpActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".SingUpAcadmicDetailActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".SingUpPhoneEmailActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".VerifyPhoneNumberActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".PasswordActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateHidden" /> <!-- <activity android:name=".HobbySelectionActivity" /> -->
+    <activity
+        android:name=".NewGroupActivity"
+        android:label="Create Group"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".HobbySelectionPage"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".GenderSelectionActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".BroadcastListActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Camera.PreviewActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".DetailActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ClipiPreviewActivity"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustResize" />
+    <activity
+        android:name=".ForgotPasswordActivity"
+        android:label="@string/title_activity_forgot_password"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="adjustResize" />
+    <activity
+        android:name=".GallaryPicker.PhotosActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".SendTagActivity"
+        android:label="Send A Tag"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".NotificationActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".SearchPlacementActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".Filter.activity.ActivityGallery" />
+    <activity
+        android:name=".SelfiCameraPreview"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustResize" />
+    <activity
+        android:name="com.yalantis.ucrop.UCropActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity
+        android:name="com.soundcloud.android.crop.CropImageActivity"
+        android:screenOrientation="portrait" />
+
+    <service
+        android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+        android:enabled="true" />
+    <service android:name=".database.SocketServiceProvider" />
+
+    <activity
+        android:name=".SearchActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".GalleryActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" /> <!-- Firebase Notifications -->
+    <service
+        android:name=".FCM.MyFirebaseMessagingService"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <service
+        android:name=".FCM.MyFirebaseInstanceIDService"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+      </intent-filter>
+    </service>
+
+    <activity
+        android:name=".BaceActivity"
+        android:label="@string/title_activity_bace"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.youthtube.VideoGallery"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.youthtube.VideoTrimmerActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.youthtube.VideoPostActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".CustomCameraActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.EditProfileActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity
+        android:name=".CommentLikeActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.AppSettings"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.ChangePassWord"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".VideoTutorialActivity"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <activity
+        android:name=".HobbiesActivity2"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <activity
+        android:name=".VideoPreviewActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".ImagePrivewActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".profile.DeactivateUserAccount"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.OtherUserProfileActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.UserProfileFragment"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.youthtube.SupportingShowroomFragment"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.teenfeed.PostAnArticle"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.SelfyMaterView"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <activity
+        android:name=".selfyManager.CameraActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".selfyManager.AddSelfy"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustResize" />
+    <activity
+        android:name=".teenfeed.SearchArticleActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.youthtube.SearchShowRoomActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".BrowsePicture2"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".AlbumPhotosActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".TermsAndCond"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <activity
+        android:name=".selfyManager.TempSelfyMasterView"
+        android:screenOrientation="portrait" />
+    <activity android:name=".ActivityGallery_Viewpager" />
+    <activity
+        android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+        android:theme="@style/Base.Theme.AppCompat" />
+    <activity
+        android:name=".Circle_AnimationActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.AboutActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.PrivacyPolicyActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.CommunityPolicyActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.TermsOfUseActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.FaqActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".MomentFeedVideoPlay"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".FullscreenVideoActivity"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".PinLockActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".CreatePostActivity_Keypadheight"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".GalleryActivity_new"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".SeeFrndPhotoActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".MainDashboardActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity
+        android:name=".RewardsActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity
+        android:name=".CommentLikeActivity_new"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".MyQuesAndAnsActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".FanList_new"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity
+        android:name=".profile.Delete_user_Account"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".profile.FeedbackActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".HobbiesActivity2_new"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+    <activity
+        android:name=".selfyManager.StatusPlaceholderActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".AddCampusLivePostActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysVisible" />
+    <activity
+        android:name=".AdminAccessActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden" />
+    <activity
+        android:name=".GallaryPicker.GalleryPickerActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".TermsOfRewardsActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden" /> <!-- tony00 -->
+    <activity
+        android:name=".chatting.ActivityChat"
+        android:parentActivityName=".MainDashboardActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="adjustResize">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".MainDashboardActivity" />
+    </activity>
+    <activity
+        android:name=".chatting.ActivityChatDetails"
+        android:launchMode="singleTop"
+        android:parentActivityName=".chatting.ActivityChat"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="adjustResize">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="in.tagteen.tagteen.chatting.ActivityChat" />
+    </activity>
+    <activity
+        android:name=".chatting.ActivityNewChat"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name="io.agora.openlive.activities.LiveBroadcasterActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="adjustPan|adjustResize" />
+    <activity
+        android:name="io.agora.openlive.activities.LiveViewerActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="adjustPan|adjustResize" />
+    <activity
+        android:name=".profile.FaceRecognitionActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Fragments.youthtube.WebShowsActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".WebShowsDetailsActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".WebShowPreviewActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+    <activity
+        android:name=".VideoPartDetail"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+    <activity
+        android:name=".KnowledgeQuestionPreviewActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".KnowledgeAnswerPreviewActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".AddKnowledgePostActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".IdeaBoxInfoActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".GamingActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/AppTheme.NoActionBar"/>
+
+
+    <activity
+        android:name=".VideoEditor.StartActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
+    </activity>
+    <activity
+        android:name=".VideoEditor.editvideo.UploadActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".VideoEditor.editvideo.EditVideoActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".VideoEditor.editvideo.CutVideoActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".VideoEditor.editvideo.SelectVideoOrImageActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".VideoEditor.editvideo.CombineImagesActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".VideoEditor.editvideo.EditSpecialEffectActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".VideoEditor.MainActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
+      <service
+        android:name=".chatting.socket.OfflineEmitterService"
+        android:exported="false" />
+    <service android:name=".backgroundUpload.UploadService"></service>
+    <service android:name=".utils.VideoPreLoadingService"
+        android:permission="android.permission.BIND_JOB_SERVICE"/>
+  </application>
+
+</manifest>

@@ -1,0 +1,270 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Scrollerview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fillViewport="true">
+
+  <RelativeLayout
+      android:id="@+id/relative"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/gray5"
+      android:orientation="vertical"
+      android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:weightSum="1">
+
+      <TextView
+          android:id="@+id/intro"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.9"
+          android:gravity="center"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+
+      <TextView
+          android:id="@+id/edit"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom"
+          android:layout_weight="0.1"
+          android:text="Edit"
+          android:textColor="@color/colorPrimary"
+          android:textSize="17dp"
+          android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+      <TextView
+          android:id="@+id/intrest"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:drawableLeft="@drawable/ic_interest"
+          android:drawablePadding="5dp"
+          android:gravity="center"
+          android:text="Interests"
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+
+      <LinearLayout
+          android:id="@+id/layoutProgressInterests"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:background="@android:color/transparent"
+          android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+      </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclInterest"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/intrest"
+          android:padding="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:id="@+id/layoutProgress"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/transparent"
+          android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/profileInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="5dp"
+          android:drawableLeft="@drawable/ic_my_personal_info"
+          android:drawablePadding="5dp"
+          android:gravity="center"
+          android:text="Personal Info"
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+
+      <TextView
+          android:id="@+id/nofriendslay"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/profileInfo"
+          android:layout_margin="10dp"
+          android:background="@drawable/rectangle"
+          android:gravity="center"
+          android:padding="25dp"
+          android:text="You don't have any fan!"
+          android:textColor="@color/gray50"
+          android:visibility="gone" />
+
+      <TextView
+          android:id="@+id/phone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/nofriendslay"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="5dp"
+          android:drawableLeft="@drawable/ic_mobile_no"
+          android:drawablePadding="5dp"
+          android:gravity="center"
+          android:text="Phone Number :"
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+
+      <TextView
+          android:id="@+id/email"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/phone"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="5dp"
+          android:drawableLeft="@drawable/ic_email"
+          android:drawablePadding="5dp"
+          android:gravity="center"
+          android:text="Email :"
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+
+      <TextView
+          android:id="@+id/school"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/email"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginRight="5dp"
+          android:drawableLeft="@drawable/ic_school"
+          android:drawablePadding="5dp"
+          android:maxLines="5"
+          android:text="Education: "
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+
+      <TextView
+          android:id="@+id/dob"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/school"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="5dp"
+          android:drawableLeft="@drawable/ic_dob"
+          android:drawablePadding="5dp"
+          android:gravity="center"
+          android:text="DOB :"
+          android:textColor="@color/black"
+          android:textSize="15dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear3"
+        android:orientation="vertical"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear3"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/category_bg"
+            android:backgroundTint="#9825CF"
+            android:padding="3dp"
+            tagteenApplication:srcCompat="@drawable/ic_add_post_moments" />
+
+        <TextView
+            android:id="@+id/my_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="Posts"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/nofriendslay1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/layouttop"
+          android:layout_margin="10dp"
+          android:background="@drawable/rectangle"
+          android:gravity="center"
+          android:padding="25dp"
+          android:text="You don't have any fan!"
+          android:textColor="@color/gray50"
+          android:visibility="gone" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/buzz_recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/linear3"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="45dp"
+          android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/load_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"></include>
+  </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

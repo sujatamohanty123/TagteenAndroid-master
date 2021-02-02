@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:adjustViewBounds="true"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      tagteenApplication:layout_scrollFlags="scroll|enterAlways"
+      tagteenApplication:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+      <TextView
+          android:id="@+id/lblMomentsTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:text="@string/social"
+          android:textColor="@color/colorPrimaryDark"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+      <LinearLayout
+          android:id="@+id/layoutChat"
+          android:layout_width="30dp"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="10dp"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            tagteenApplication:srcCompat="@drawable/ic_chat_icon_active" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/chat"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_toLeftOf="@id/layoutChat"
+          android:layout_toRightOf="@id/lblMomentsTitle"
+          android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/oval_background_theme_color"
+            android:backgroundTint="@color/grey_200"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:focusable="false"
+            android:hint="Search new friends"
+            android:paddingLeft="10dp"
+            android:textColor="@color/grey_500"
+            android:textColorHint="@color/grey_500"
+            android:textCursorDrawable="@null"
+            android:textSize="10sp" />
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+  </androidx.appcompat.widget.Toolbar>
+
+  <View
+      android:id="@+id/separator"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:layout_below="@id/toolbar"
+      android:background="@drawable/toolbar_dropshadow" />
+
+
+  <RelativeLayout
+      android:id="@+id/buzz_main_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignWithParentIfMissing="true"
+      android:layout_below="@id/separator"
+      android:background="@color/gray5"
+      android:orientation="vertical"
+      android:visibility="visible">
+
+    <include
+        layout="@layout/video_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/simpleSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linerLoadmore"
+        android:layout_below="@+id/layoutProgress">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <include layout="@layout/shimmer_layout_moments" />
+
+            <include layout="@layout/shimmer_layout_moments" />
+          </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:id="@+id/frame_relative"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:animateLayoutChanges="true"
+              android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container_new_joiners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+              <androidx.appcompat.widget.AppCompatTextView
+                  android:id="@+id/txt_title_new_joiners"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:paddingStart="10dp"
+                  android:paddingBottom="2dp"
+                  android:text="New Joiners"
+                  android:textAppearance="@android:style/TextAppearance.Small"
+                  android:textColor="@color/black"
+                  android:textSize="14sp"
+                  android:textStyle="bold"
+                  tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerviewNewies"
+                  android:layout_width="match_parent"
+                  android:layout_height="85dp"
+                  android:background="@color/white"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp"
+                  android:visibility="visible" />
+
+              <View
+                  android:id="@+id/line5"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/gray5" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_moments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="2dp"
+                android:text="Moments"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray5"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lblMarqueeText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/colorPrimary"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/social_marquee"
+                android:textAlignment="gravity"
+                android:textColor="@color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layoutMomentsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:visibility="gone">
+
+              <ImageView
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_gravity="center"
+                  android:tint="@color/colorPrimary"
+                  tagteenApplication:srcCompat="@drawable/ic_moments_message_icon" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginRight="20dp"
+                  android:gravity="center"
+                  android:text="Share your first moment with your friends and supporters"
+                  android:textAppearance="@android:style/TextAppearance.Medium"
+                  android:textColor="@color/full_black"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="20dp"
+                  android:layout_marginRight="20dp"
+                  android:drawableRight="@drawable/mdb_search"
+                  android:drawableTint="@color/colorPrimary"
+                  android:text="Click on the "
+                  android:textAppearance="@android:style/TextAppearance.Medium"
+                  android:textColor="@color/full_black"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:gravity="center"
+                  android:text="at the top. Find and add friends and see their moments."
+                  android:textAppearance="@android:style/TextAppearance.Medium"
+                  android:textColor="@color/full_black"
+                  android:textStyle="bold" />
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+      </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/welcome_msg"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginTop="55dp"
+      android:text="Hi Welcome to Tagteen"
+      android:textSize="19dp"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+
+  <in.tagteen.tagteen.util.FloatingActionButton
+      android:id="@+id/fabAddMoments"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true"
+      android:layout_gravity="bottom|right"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/floatingbutton"
+      android:paddingBottom="5dp"
+      android:tint="@color/white"
+      tagteenApplication:srcCompat="@drawable/ic_add_post_moments" />
+
+  <TextView
+      android:id="@+id/no_internet"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:layout_marginBottom="250dp"
+      android:gravity="center"
+      android:text="No Internet Connection!!!!"
+      android:textSize="19dp"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+</RelativeLayout>

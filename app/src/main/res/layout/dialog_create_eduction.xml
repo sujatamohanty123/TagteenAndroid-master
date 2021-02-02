@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNewAcademic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTitle"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtNewAcademic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="School name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:textColorHint="@color/grey_400"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNewPincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayoutNewAcademic"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtNewPincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pincode"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:textColorHint="@color/grey_400"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNewDistrict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayoutNewPincode"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtNewDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="District"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:textColorHint="@color/grey_400"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutNewState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayoutNewDistrict"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtNewState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="State"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:textColorHint="@color/grey_400"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            tagteenApplication:backgroundTint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/lblDone"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputLayoutNewState"
+        android:background="@drawable/fnn_unselect"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

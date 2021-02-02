@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="@color/emoji_keyboard"
+    sothree:umanoFadeColor="@android:color/transparent"
+    sothree:umanoInitialState="hidden"
+    sothree:umanoOverlay="false"
+    sothree:umanoPanelHeight="250dp"
+    sothree:umanoShadowHeight="0dp">
+
+    <FrameLayout
+        android:id="@+id/mainViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/emojiContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/emoji_keyboard">
+
+        <GridView
+            android:id="@+id/emojiGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="8"
+            android:padding="10dp"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:background="@color/emoji_keyboard"/>
+
+    </FrameLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+
+

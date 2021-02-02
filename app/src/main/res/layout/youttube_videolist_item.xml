@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cn.jzvd.CustomView.MyJZVideoPlayerStandard
+            android:id="@+id/jz_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <ImageView
+            android:id="@+id/moreOptions"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/more_option" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_userpic" />
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/profileImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:text="Toro Creator"
+                android:textColor="@color/black"
+                android:textSize="@dimen/feed_sub_headrtext_size" />
+
+            <TextView
+                android:id="@+id/userTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp"
+                android:maxLength="20"
+                android:text="Tag-#10009"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="@dimen/bvp_text_size_small" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/viewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="12 Views"
+            android:textSize="@dimen/floating_label_text_size" />
+
+
+        <TextView
+            android:id="@+id/viewBeAff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/viewCount"
+            android:background="@drawable/fnn_select"
+            android:padding="8dp"
+            android:text="Be a Fnn"
+            android:textSize="@dimen/floating_label_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/feedDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_100"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:text="@string/sample"
+        android:textColor="@color/grey_900"
+        android:textSize="@dimen/feed_desc_text_size" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/likeImage"
+                style="@style/Facebook.Button.Feed"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#0000"
+                android:src="@drawable/youttube_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/likeImage"
+                android:gravity="center"
+                android:text="U Rok"
+                android:textSize="@dimen/floating_label_text_size" />
+
+
+            <TextView
+                android:id="@+id/rokCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/likeImage"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="11"
+                android:textSize="@dimen/floating_label_text_size" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/layoutshare"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageComments"
+                style="@style/Facebook.Button.Feed"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#0000"
+                android:src="@drawable/ic_svg_comment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imageComments"
+                android:gravity="center"
+                android:text="Comment"
+                android:textSize="@dimen/floating_label_text_size" />
+
+
+            <TextView
+                android:id="@+id/commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageComments"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="13"
+                android:textSize="@dimen/floating_label_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageshare"
+                style="@style/Facebook.Button.Feed"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#0000"
+                android:src="@drawable/ic_svg_share_unselect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imageshare"
+                android:gravity="center"
+                android:text="Share"
+                android:textSize="@dimen/floating_label_text_size" />
+
+
+            <TextView
+                android:id="@+id/shareCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageshare"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="@dimen/floating_label_text_size" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+</LinearLayout>

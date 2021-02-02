@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tagtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your unique tag number is getting created"
+        android:textColor="@color/blue_heading"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:maxLines="3"
+        android:layout_margin="50dp"
+        />
+
+    <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+        android:id="@+id/circle_loading_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        tagteenApplication:mainColor="@color/blue_heading"
+        tagteenApplication:secondaryColor="@color/blue_heading"
+        tagteenApplication:textColor="@color/blue_heading"
+        />
+
+
+    <TextView
+        android:id="@+id/userkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text=""
+        android:textSize="35sp"
+        android:visibility="visible"
+        android:textColor="@color/blue_heading"
+        android:layout_below="@+id/circle_loading_view"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="20dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        tagteenApplication:elevation="6dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            tagteenApplication:layout_scrollFlags="scroll|enterAlways"
+            tagteenApplication:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/chatViewImage_ab"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tagteen_final_logo" />
+
+                    <TextView
+                        android:id="@+id/unverified_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red_500"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSupporting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/btnRewards"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:gravity="center"
+                        android:background="@drawable/rewards_bg"
+                        android:backgroundTint="@color/colorPrimaryDark">
+
+                        <ImageView
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:scaleType="centerCrop"
+                            android:tint="@color/white"
+                            android:src="@drawable/ic_supporting_icon" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnRewards"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:gravity="center"
+                        android:background="@drawable/rewards_bg"
+                        android:backgroundTint="@color/colorPrimaryDark">
+
+                        <ImageView
+                            android:id="@+id/imgProfileIcon"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_userpic" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/search_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/layoutLogo"
+                    android:layout_toLeftOf="@id/layoutSupporting"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:focusable="false"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textCursorDrawable="@null"
+                        android:drawableLeft="@drawable/search_icon"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey_500"
+                        android:background="@drawable/oval_background_theme_color"
+                        android:backgroundTint="@color/grey_200"
+                        android:textColorHint="@color/grey_500"
+                        android:hint="@string/search_people"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutNotifications"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/lblNotificationsCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:text="34"
+                            android:padding="2dp"
+                            android:background="@drawable/category_bg"
+                            android:backgroundTint="@color/red_600"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            tagteenApplication:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    tagteenApplication:tabGravity="fill"
+                    tagteenApplication:tabIndicatorColor="@color/colorPrimary"
+                    tagteenApplication:tabIndicatorHeight="0dp"
+                    tagteenApplication:tabMaxWidth="0dp"
+                    tagteenApplication:tabMode="scrollable"
+                    tagteenApplication:tabPaddingEnd="0dp"
+                    tagteenApplication:tabPaddingStart="0dp"
+                    tagteenApplication:tabSelectedTextColor="@color/colorPrimary"
+                    tagteenApplication:tabTextColor="@color/grey_700" />
+
+                <ImageView
+                    android:id="@+id/imgExpandOptions"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorPrimaryAlpha"
+                    tagteenApplication:srcCompat="@drawable/ic_category_hidden_icon"
+                    android:tint="@color/colorPrimary"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/toolbar_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@id/tabs_home"
+                android:background="@drawable/toolbar_dropshadow"
+                android:elevation="6dp"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarLayout"
+        android:background="@color/gray5"
+        tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/floatingbutton"
+        android:tint="@color/white"
+        tagteenApplication:srcCompat="@drawable/ic_add_post_new" />
+
+    <in.tagteen.tagteen.util.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/floatingbutton"
+        android:tint="@color/white"
+        tagteenApplication:srcCompat="@drawable/ic_video_icon_new"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:id="@+id/buzz_main_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/gray5"
+      android:orientation="vertical"
+      android:visibility="visible">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/simpleSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linerLoadmore"
+        android:layout_below="@+id/layoutProgress">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <include layout="@layout/shimmer_layout_moments"></include>
+
+            <include layout="@layout/shimmer_layout_moments"></include>
+
+          </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <com.google.android.material.appbar.AppBarLayout
+              android:id="@+id/app_bar"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tagteenApplication:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tagteenApplication:layout_scrollFlags="scroll|exitUntilCollapsed"
+                tagteenApplication:scrimAnimationDuration="0">
+
+              <LinearLayout
+                  android:id="@+id/frame_relative"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:animateLayoutChanges="true"
+                  android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+              </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+          </com.google.android.material.appbar.AppBarLayout>
+
+          <!--                        <View-->
+          <!--                            android:id="@+id/line"-->
+          <!--                            android:layout_width="match_parent"-->
+          <!--                            android:layout_height="1dp"-->
+          <!--                            android:visibility="gone"-->
+          <!--                            android:background="@color/gray5" />-->
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recycler_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+      </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/welcome_msg"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginTop="20dp"
+      android:text="Hi Welcome to Tagteen"
+      android:textSize="19dp"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+  <LinearLayout
+      android:id="@+id/layoutMomentsInfo"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="30dp"
+      android:orientation="vertical"
+      android:visibility="gone">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:tint="@color/colorPrimary"
+        tagteenApplication:srcCompat="@drawable/ic_moments_message_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Share your first moment with your friends and supporters"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/full_black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableRight="@drawable/mdb_search"
+        android:drawableTint="@color/colorPrimary"
+        android:text="Click on the "
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/full_black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="at the top. Find and add friends and see their moments."
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/full_black"
+        android:textStyle="bold" />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/no_internet"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:layout_marginBottom="250dp"
+      android:gravity="center"
+      android:text="No Internet Connection!!!!"
+      android:textSize="19dp"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+</LinearLayout>

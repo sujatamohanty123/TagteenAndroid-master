@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000">
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <in.tagteen.tagteen.videoPakage.exoplayer2.ExoPlayerView
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="200dp"
+        tagteenApplication:resize_mode="fill"
+        tagteenApplication:surface_type="texture_view"
+        tagteenApplication:use_artwork="true"
+        tagteenApplication:use_controller="true"
+        tagteenApplication:controller_layout_id="@layout/exo_playback_control_view" />
+
+    <ImageView
+        android:id="@+id/animal_detail_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+ <!--   <TextView
+        android:id="@+id/video_strecth"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:background="#00000000"
+        android:layout_gravity="bottom|right"/>-->
+
+
+</FrameLayout>
+
+      <include layout="@layout/vh_fb_feed_user"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:text="@string/sample"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        />
+
+    <include layout="@layout/vh_fb_feed_bottom"/>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height=".05dp"
+          android:layout_margin="20dp"
+          android:background="@android:color/darker_gray"/>
+  </LinearLayout>
+
+
+</FrameLayout>

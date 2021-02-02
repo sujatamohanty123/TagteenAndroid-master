@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            style="@style/create_story_visibility_layout_style"
+            android:id="@+id/story_visibility_layout"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="post"
+                android:id="@+id/visibility_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/visibility_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="public"
+                android:id="@+id/visibility_public_radio"/>
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/visibility_info_icon"
+                android:src="@drawable/info_24_gray"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+        <RelativeLayout
+
+            android:layout_width="fill_parent"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/feed_creator_image"
+                android:src="@drawable/pr_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <EditText
+                android:paddingLeft="5dp"
+                android:background="#00000000"
+                android:textSize="13dp"
+                android:id="@+id/feed_details"
+                android:hint="write Some thing Here"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/feed_creator_image"
+                android:layout_toEndOf="@+id/feed_creator_image" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/select_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_camera_48"
+                android:id="@+id/feed_add_image_view"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/selected_imageLayout"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:src="@drawable/emoji_00a9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/feed_selected_image_view" />
+            <ImageView
+                android:id="@+id/crop_image"
+                android:src="@android:drawable/ic_menu_crop"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <ImageView
+                android:id="@+id/remove_image"
+                android:src="@drawable/cross_icon"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/feed_selected_image_view"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

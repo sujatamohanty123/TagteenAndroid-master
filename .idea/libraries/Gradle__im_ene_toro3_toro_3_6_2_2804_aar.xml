@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: im.ene.toro3:toro:3.6.2.2804@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ef61306277d0fded14e9ab49c243ad/jetified-toro-3.6.2.2804/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ef61306277d0fded14e9ab49c243ad/jetified-toro-3.6.2.2804/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ef61306277d0fded14e9ab49c243ad/jetified-toro-3.6.2.2804/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ef61306277d0fded14e9ab49c243ad/jetified-toro-3.6.2.2804/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/im.ene.toro3/toro/3.6.2.2804/e4e22991a28a8796be4db168e3e965e73b51d291/toro-3.6.2.2804-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/im.ene.toro3/toro/3.6.2.2804/6c9bc97c7220f4fc6521737a8fb8d088dfc572e4/toro-3.6.2.2804-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fb_gb"
+    android:orientation="vertical">
+
+    <im.ene.lab.toro.ToroVideoView
+        android:id="@+id/videoPlayer_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/videoConrtollr_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/textTimeupdate_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="00:00"
+            android:textColor="@color/gray5" />
+
+        <SeekBar
+            android:id="@+id/seekabrview_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:progressTint="@color/white"
+            android:tickMarkTint="@color/gray5" />
+
+        <TextView
+            android:id="@+id/textTotaltime_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="00:00"
+            android:textColor="@color/gray5" />
+
+        <ImageView
+            android:id="@+id/makeVideofullscren_preview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/make_fullscreen"
+            android:tint="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imagelogo_preview"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@drawable/logo_inner_page" />
+</RelativeLayout>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/grey_700"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
+        android:textSize="14sp"
+        android:text="Today"
+        android:textColor="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/chat_th_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_label"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/receiver_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone">
+
+            <in.tagteen.tagteen.emoji.EmojiconTextView
+                android:id="@+id/receiver_textView"
+                style="@style/chat_text_message_style"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:autoLink="web"
+                android:background="@drawable/cmp_chat_buble_white"
+                android:maxWidth="300dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="7dp"
+                android:text="hello_worlddfsdl koodsfdl dfsd"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                emojicon:emojiconSize="28sp" />
+
+
+            <LinearLayout
+                android:id="@+id/receiver_audio_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cmp_chat_buble_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/receiver_play_stop_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="true"
+                    android:paddingLeft="10dp"
+                    android:src="@android:drawable/ic_media_play" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/receiver_audio_player_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="00:00" />
+
+                    <ProgressBar
+                        android:id="@+id/receiver_audio_progressbar"
+                        android:layout_width="50dp"
+
+                        android:layout_height="50dp" />
+
+                </FrameLayout>
+
+                <SeekBar
+                    android:id="@+id/receiver_seekbar_play"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/receiver_media_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/receiver_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pr_pic"
+                    emojicon:riv_border_color="@color/actionbar_bg"
+                    emojicon:riv_border_width="1dip"
+                    emojicon:riv_corner_radius="20dp"
+                    emojicon:riv_mutate_background="true"
+                    emojicon:riv_tile_mode="clamp" />
+
+                <ImageView
+                    android:id="@+id/receiver_video_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_media_play"
+
+                    />
+
+                <ProgressBar
+                    android:id="@+id/receiver_progressBar"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/receiver_selfReation_imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pr_pic" />
+
+
+            <FrameLayout
+                android:id="@+id/receiver_doc_layer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/receiver_documentView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@color/gray5"
+                    android:gravity="center"
+                    android:text="ZYz.pdf"
+                    android:textColor="@color/blue_500"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/receiver_doc_progressbar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/receiver_ping_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cmp_chat_buble_white"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/receiver_ping_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pr_pic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/receiver_ping_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="you Pinged "
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ping_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/receiver_time_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/chat_company_reply_text"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <!--  style="@style/chat_timings"-->
+
+                <TextView
+                    android:id="@+id/receiver_chatTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/chat_company_reply_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/chat_company_reply_text"
+                    android:gravity="top"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="02:45 pm"
+                    android:textColor="@color/green_700" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/private_chat_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eventImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cmp_like"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/cmp_like_icon" />
+
+            <LinearLayout
+                android:id="@+id/send_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+                <in.tagteen.tagteen.emoji.EmojiconTextView
+                    android:id="@+id/sender_textView"
+                    style="@style/chat_text_message_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:autoLink="web"
+                    android:background="@drawable/cmp_chat_buble_blue"
+                    android:maxWidth="300dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="7dp"
+                    android:text="hello_worlddfsdl koodsfdl dfsd"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    emojicon:emojiconSize="28sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/sender_audio_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cmp_chat_buble_blue"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/sender_play_stop_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="true"
+                            android:paddingLeft="10dp"
+                            android:src="@android:drawable/ic_media_play" />
+
+                        <ProgressBar
+                            android:id="@+id/sender_audio_progressbar"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center" />
+                        <!--  style="@style/SmallProgressBar"-->
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/sender_audio_player_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="00:00" />
+
+                    <SeekBar
+                        android:id="@+id/sender_seekbar_play"
+                        android:layout_width="170dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/send_media_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/sender_image"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pr_pic"
+                        emojicon:riv_border_color="@color/actionbar_bg"
+                        emojicon:riv_border_width="1dip"
+                        emojicon:riv_corner_radius="20dp"
+                        emojicon:riv_mutate_background="true"
+                        emojicon:riv_tile_mode="clamp" />
+
+                    <ImageView
+                        android:id="@+id/sender_video_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_media_play"
+
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/sender_progressBar"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/sender_selfReation_imageView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pr_pic" />
+
+
+                <FrameLayout
+                    android:id="@+id/sender_doc_layer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sender_documentView"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@color/blue_500"
+                        android:gravity="center"
+                        android:text="ZYz.pdf"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/sender_doc_progressbar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sender_ping_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cmp_chat_buble_blue"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/sender_ping_image"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pc" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sender_ping_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="you Pinged "
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ping_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sender_time_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/chat_company_reply_text"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <!--  style="@style/chat_timings"-->
+
+                    <TextView
+                        android:id="@+id/sender_chatTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/chat_company_reply_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/chat_company_reply_text"
+                        android:gravity="top"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:text="02:45 pm"
+                        android:textColor="@color/green_700" />
+
+                    <ImageView
+                        android:id="@+id/sender_chat_status"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/readmessage_indicater" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

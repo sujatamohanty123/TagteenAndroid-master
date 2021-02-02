@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.dsrees:JavaPhoenixClient:0.3.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.dsrees/JavaPhoenixClient/0.3.0/87b8897d8d1e3fe04632fb9e04f50e65985c99de/JavaPhoenixClient-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.dsrees/JavaPhoenixClient/0.3.0/1e0beca3ca9c3edac4f963e65b6bf40297d38c89/JavaPhoenixClient-0.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.dsrees/JavaPhoenixClient/0.3.0/1dbaba1eb4ac57fa5c25d0a8b38dbb6ead2173f8/JavaPhoenixClient-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

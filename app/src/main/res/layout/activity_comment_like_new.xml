@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:id="@+id/layoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.5"
+        android:orientation="vertical">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/background_light"
+            tagteenApplication:tabGravity="fill"
+            tagteenApplication:tabIndicatorColor="@color/colorPrimary"
+            tagteenApplication:tabIndicatorHeight="2dp"
+            tagteenApplication:tabMaxWidth="0dp"
+            tagteenApplication:tabMode="fixed"
+            tagteenApplication:tabPaddingEnd="0dp"
+            tagteenApplication:tabPaddingStart="0dp"
+            tagteenApplication:tabSelectedTextColor="@color/colorPrimary"
+            tagteenApplication:tabTextColor="@color/grey_700"/>
+        <View
+            android:id="@+id/bottom_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e6e6e6" />
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            class="com.example.sujata.tagteen_profile.ProfileActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_transparent"
+            tagteenApplication:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+</LinearLayout>

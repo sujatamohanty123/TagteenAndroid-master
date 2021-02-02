@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/optionAll"
+        android:title="All posts"/>
+
+    <item
+        android:id="@+id/optionByCourse"
+        android:title="My course posts"/>
+
+    <item
+        android:id="@+id/optionByDegree"
+        android:title="My degree posts"/>
+
+    <item
+        android:id="@+id/optionByYear"
+        android:title="My year posts"/>
+
+    <item
+        android:id="@+id/optionByStandard"
+        android:title="My standard posts"/>
+
+</menu>

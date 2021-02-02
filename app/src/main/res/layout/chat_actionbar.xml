@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/default_userpic"
+        android:id="@+id/chatViewImage_ab"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        tagteenApplication:riv_border_color="@color/app_blue"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/chatViewImage_ab"
+        android:layout_toEndOf="@+id/chatViewImage_ab"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:textSize="14dp"
+            android:paddingRight="2dp"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_900"
+            android:id="@+id/chatreceiver_name"/>
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:textSize="10dp"
+            android:paddingRight="2dp"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:text="offline.."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_700"
+            android:id="@+id/chatSubtitle"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chat_more_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

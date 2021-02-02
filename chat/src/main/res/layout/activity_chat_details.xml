@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/chat_toolbar"/>
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/chat_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+        <!--tagteenApplication:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/toolbarTitle"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="@dimen/text_actionbar"-->
+                <!--android:textStyle="bold"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/userStatus"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="14sp"-->
+                <!--android:visibility="gone"/>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <in.tagteen.tagteen.chatting.paging.PagingRecyclerView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:listSelector="#00000000"
+            android:transcriptMode="normal"
+            android:scrollbars="vertical">
+
+        </in.tagteen.tagteen.chatting.paging.PagingRecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/new_message_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:visibility="gone">
+
+            <!--<Button-->
+                <!--android:id="@+id/indicator"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/ic_arrow_down" />-->
+
+            <TextView
+                android:id="@+id/message_count"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_xxlarge"
+                android:maxLines="1"
+                android:background="@drawable/textview_round"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/input_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lyt_thread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tagteenApplication:cardBackgroundColor="@android:color/white"
+            android:layout_toLeftOf="@+id/btn_send"
+            tagteenApplication:cardCornerRadius="20dp"
+            tagteenApplication:cardElevation="2dp"
+            tagteenApplication:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_bg">
+
+                <ImageView
+                    android:id="@+id/soundEmoji"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/chat_smiley"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"/>
+
+            <in.tagteen.tagteen.chatting.widget.TypingEditText
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:maxLines="5"
+                android:background="@color/grey_bg"
+                android:hint="type message.."
+                android:layout_toRightOf="@+id/soundEmoji"
+                android:layout_centerVertical="true"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingRight="12dp"
+                android:paddingLeft="8dp"
+                android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/button_round"
+            android:src="@drawable/send_message"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/networkStatusBackground"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:background="@color/offline"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/networkStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bad Internet Connection"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_small"/>
+
+    </LinearLayout>
+
+</LinearLayout>

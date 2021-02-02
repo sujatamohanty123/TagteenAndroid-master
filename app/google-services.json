@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "697259207427",
+    "firebase_url": "https://tagteen-pro.firebaseio.com",
+    "project_id": "tagteen-pro",
+    "storage_bucket": "tagteen-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697259207427:android:5abe18a8420a63ae3bd736",
+        "android_client_info": {
+          "package_name": "in.tagteen.tagteen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697259207427-a61ruu4i9fgf6bo637mb7r7pcp1rstvp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.tagteen.tagteen",
+            "certificate_hash": "be1a38627fbeaa0929f8ba4e2a987b3f1b0e0cb3"
+          }
+        },
+        {
+          "client_id": "697259207427-col93ii626eq21f233aopfv5iumd0ne9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.tagteen.tagteen",
+            "certificate_hash": "0c4a65535827e82cd7ed1a790c4b6ad52df1f7de"
+          }
+        },
+        {
+          "client_id": "697259207427-l1pfhmm68u6tkgb37guolubbhrl9j12j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.tagteen.tagteen",
+            "certificate_hash": "4b6163a865bb5a3db6df4713bbf792e4187d713d"
+          }
+        },
+        {
+          "client_id": "697259207427-sgr60vuv47lepvf8ul9v9h21l9s3p892.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw_WUIehZj5BwqWg8at900N-MFfWM_Rs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "697259207427-sgr60vuv47lepvf8ul9v9h21l9s3p892.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

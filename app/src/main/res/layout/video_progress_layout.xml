@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/layoutProgress">
+
+    <ImageView
+        android:id="@+id/imgCancelUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_close"/>
+
+    <TextView
+        android:id="@+id/textPer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="0%"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/colorAccent" />
+
+    <ProgressBar
+        android:id="@+id/progressPreparingVideo"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:progressTint="@color/colorPrimaryDark"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imgCancelUpload"
+        android:layout_toLeftOf="@id/textPer"
+        android:max="100"
+        android:padding="2dp"
+        android:layout_marginLeft="10dp"
+        android:progressTint="@color/colorAccent" />
+
+</RelativeLayout>

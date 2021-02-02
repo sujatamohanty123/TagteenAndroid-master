@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tagteenApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <in.tagteen.tagteen.CarouselPicker.CarouselPickerTextView
+            android:id="@+id/carousel_selfi_component"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            tagteenApplication:items_visible="three" />
+    </LinearLayout>
+
+    <in.tagteen.tagteen.Camera.widgets.RecordButton
+        android:id="@+id/record_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/lion"
+        android:src="@drawable/camera_button"
+        android:transitionName="@string/simple_activity_transition"
+        tools:ignore="UnusedAttribute" />
+
+    <RelativeLayout
+        android:id="@+id/camera_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/closs_selfi_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="onFragmentViewClick" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <in.tagteen.tagteen.Camera.widgets.FlashSwitchView
+                    android:id="@+id/flash_switch_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"/>
+
+                <in.tagteen.tagteen.Camera.widgets.CameraSwitchView
+                    android:id="@+id/front_back_camera_switcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone"
+                    tagteenApplication:srcCompat="@drawable/ic_camera_front_white_24dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/capture_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50dp"
+            android:background="#00000000">
+
+            <TextView
+                android:id="@+id/record_duration_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/record_size_mb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                android:visibility="invisible" />
+
+            <in.tagteen.tagteen.Camera.widgets.MediaActionSwitchView
+                android:id="@+id/photo_video_camera_switcher"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_toEndOf="@+id/record_size_mb_text"
+                android:layout_toRightOf="@+id/record_size_mb_text"
+                android:checked="false"
+                android:gravity="center"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
